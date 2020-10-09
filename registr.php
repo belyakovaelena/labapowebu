@@ -43,12 +43,7 @@
                     <li class="nav-item">
                         <a href="dostavka.php" class="nav-link waves-effect waves-light">ДОСТАВКА</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="index.php#yak1" class="nav-link waves-effect waves-light">АКЦИИ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.php#yak2" class="nav-link waves-effect waves-light">КОНТАКТЫ</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a href="registr.php" class="nav-link">Войти/Зарегистрироваться</a>
                     </li>
