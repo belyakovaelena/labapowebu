@@ -1,0 +1,34 @@
+#box {
+  background-color: rgba(0,0,0,0.25); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+#h1_for_menu{
+padding-top: 82px;
+color: white;
+}
+
+header#menu{
+	background-color: #151E1E;
+	height: 35%;
+}
+
+html,body,header, #intro{
+		height: 100%;
+}
+
+#intro{
+	background: url(../img/img_9728.jpg) no-repeat center center fixed;
+	
+}
+.top-nav-collapse{
+	background-color: #24355C;
+}
+@media (max-width: 768px) {
+ .navbar:not(.top-nav-collapse){
+   background: #24355C;
+}
+}
+
+
+
