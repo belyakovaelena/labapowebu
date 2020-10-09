@@ -10,9 +10,16 @@ $mysql = new mysqli('localhost', 'root', 'root', 'register-bd');
 
 $result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `pass`='$pass'");
 
+$check_if = mysqli_num_rows($result);
 $user = $result->fetch_assoc();
-if(count($user) == 0){
-    echo "Такой пользователь не найден";
+if (!$check_if) {
+    echo "Неверный логин или пароль";
+    ?>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    </br><a class="btn btn-secondary" href="registr.php">Вернуться назад</a>
+<?php
     exit();
 }
 

@@ -68,7 +68,7 @@
     <div class="row">
         <div class="col">
             <div class="form">
-                <h1>ДЛЯ РЕГИСТРАЦИИ В ЛИЧНОМ КАБИНЕТЕ</h1>
+                <h1>ДЛЯ РЕГИСТРАЦИИ</h1>
                 <form action="check.php" method="post">
                     <div class="input-form">
                         <input type="text" name="name" id="name" placeholder="Введите имя">
@@ -88,7 +88,7 @@
         </div>
         <div class="col">
             <div class="form">
-                <h1>ДЛЯ ВХОДА В ЛИЧНЫЙ КАБИНЕТ</h1>
+                <h1>ДЛЯ АВТОРИЗАЦИИ</h1>
                 <form action="augh.php" method="post">
 
                     <div class="input-form">
