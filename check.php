@@ -11,6 +11,7 @@ if(mb_strlen($login) < 5 || mb_strlen($login) > 50) {
     exit();
 } else if(mb_strlen($pass) < 2 || mb_strlen($pass) > 10) {
     echo "Недопустимая длина пароля (от 2 до 10 символов)";
+
     exit();
 }
 $pass = md5($pass."ktyf0301");
@@ -19,6 +20,6 @@ $mysql = new mysqli('localhost', 'root', 'root', 'register-bd');
 $mysql->query("INSERT INTO `users` (`login`, `pass`, `name`) VALUES('$login', '$pass', '$name')");
 $mysql->close();
 
-header('Location: ../registr.php');
+header('Location: ../register.php');
 ?>
 ?>

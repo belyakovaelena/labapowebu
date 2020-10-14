@@ -41,19 +41,19 @@
                         <a href="menu.php" class="nav-link waves-effect waves-light">МЕНЮ</a>
                     </li>
                     <li class="nav-item">
-                        <a href="dostavka.php" class="nav-link waves-effect waves-light">ДОСТАВКА</a>
+                        <a href="delivery.php" class="nav-link waves-effect waves-light">ДОСТАВКА</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a href="registr.php" class="nav-link">Войти/Зарегистрироваться</a>
+                        <a href="register.php" class="nav-link">Войти/Зарегистрироваться</a>
                     </li>
                 </ul>
 
                 <?php
-                if (!empty($_COOKIE['user'])) :
+                if (!empty($_SESSION['user'])) :
                     ?>
 
-                    <li class="nav-link" >Привет, <?= $_COOKIE['user'] ?>.<a href="registr.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
+                    <li class="nav-link" >Привет, <?= $_SESSION['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
                 <?php
                 endif;
                 ?>
@@ -63,7 +63,7 @@
 </header>
 
     <?php
-    if($_COOKIE['user'] == ''):
+
     ?>
     <div class="row">
         <div class="col">
@@ -89,7 +89,7 @@
         <div class="col">
             <div class="form">
                 <h1>ДЛЯ АВТОРИЗАЦИИ</h1>
-                <form action="augh.php" method="post">
+                <form action="authorization.php" method="post">
 
                     <div class="input-form">
                         <input type="text" name="login" id="login" placeholder="ЛОГИН">
@@ -111,7 +111,7 @@
     <?php
 
     $mysql = new mysqli('localhost','root','root','register-bd');
-    $name = $_COOKIE['user'];
+    $name = $_SESSION['user'];
     $result= $mysql->query("SELECT `login` FROM `users` WHERE `name` = '$name'");
     $arr=$result->fetch_assoc();
     $login=$arr['login'];
@@ -124,7 +124,6 @@
                         <h1>Это ваш личный кабинет</h1><br>
                         <h2>СПАСИБО ЗА ТО ЧТО ВЫБИРАЕТЕ НАС</h2>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -135,7 +134,7 @@
 
                     <h3>Информация о пользователе</h3><br>
 
-                    <p>Имя: <?= $_COOKIE['user'] ?></p><br>
+                    <p>Имя: <?= $_SESSION['user'] ?></p><br>
 
                     <p>login: <?=$login?></p>
                 </div>

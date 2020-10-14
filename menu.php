@@ -35,7 +35,7 @@
 <a href="menu.php" class="nav-link waves-effect waves-light">МЕНЮ</a>
 </li>
 <li class="nav-item">
-<a href="dostavka.php" class="nav-link waves-effect waves-light">ДОСТАВКА</a>
+<a href="delivery.php" class="nav-link waves-effect waves-light">ДОСТАВКА</a>
 </li>
 <li class="nav-item">
 <a href="index.php#yak1" class="nav-link waves-effect waves-light">АКЦИИ</a>
@@ -44,16 +44,16 @@
 <a href="index.php#yak2" class="nav-link waves-effect waves-light">КОНТАКТЫ</a>
 </li>
     <li class="nav-item">
-        <a href="registr.php" class="nav-link">Войти/Зарегистрироваться</a>
+        <a href="register.php" class="nav-link">Войти/Зарегистрироваться</a>
     </li>
 </ul>
 
     <?php
-    if (!empty($_COOKIE['user'])) :
+    if (!empty($_SESSION['user'])) :
         ?>
 
 
-        <li class="nav-link" >Привет, <?= $_COOKIE['user'] ?>.<a href="registr.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
+        <li class="nav-link" >Привет, <?= $_SESSION['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
     <?php
     endif;
     ?>
@@ -68,10 +68,7 @@
 
 </header>
 
-
-
 <main class="mt-5 pt-4">
-
 
 <div class="container">
   <div class="row">
@@ -119,8 +116,7 @@
 	  
 	  <h4 class="my-5 font-weight-bold" align="center"><a href="#yak_bakery" class="text-dark">Выпечка</a></h4>
     </div>
-	
-	
+
 	<!-- 5th column -->
     <div class="col-sm">
       <div class="view overlay zoom">
@@ -130,11 +126,8 @@
 	  
 	  <h4 class="my-5 font-weight-bold" align="center"><a href="#yak_drinks" class="text-dark">Напитки</a></h4>
     </div>
-	
-	
   </div>
 </div>
-
 
 <section class="text-center mb-4">
 <div class="container">
