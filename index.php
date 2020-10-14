@@ -41,19 +41,16 @@
 					<li class="nav-item">
 						<a href="#yak1" class="nav-link waves-effect waves-light">АКЦИИ</a>
 					</li>
+
 					<li class="nav-item">
-						<a href="#yak2" class="nav-link waves-effect waves-light">КОНТАКТЫ</a>
-					</li>
-					<li class="nav-item">
-						<a href="register.php" class="nav-link">Войти/Зарегистрироваться</a>
+						<a href="register.php" class="nav-link">ВОЙТИ/ЗАРЕГИСТРИРОВАТЬСЯ</a>
+
 					</li>
 				</ul>
-
                 <?php
-                if (!empty($_SESSION['user'])) :
+                if (!empty($_COOKIE['user'])) :
                     ?>
-
-                    <li class="nav-link" >Привет, <?= $_SESSION['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
+                    <li class="nav-link" >Привет, <?= $_COOKIE['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
                 <?php
                 endif;
                 ?>
@@ -88,9 +85,7 @@
 			</div>
 			</div>
 		</section>
-		
 		<hr class="my-5">
-		
 		<section id="examples" class="text-center">
 			<h2 class="mb-5 font-weight-bold">АКЦИИ</h2>
 			
@@ -102,7 +97,6 @@
 					class="img- fluid"> 
 					<div class="mask flex-center"></div>
 					</div>
-					
 					<h4 class="my-5 font-weight-bold">ЗАВТРАКИ</h4>
 					<p class="grey-text"> чай+сэндвичи+каша на выбор за 150 руб</p>
 				</div>

@@ -37,25 +37,20 @@
 					<a href="menu.php" class="nav-link waves-effect waves-light">МЕНЮ</a>
 				</li>
 				<li class="nav-item">
-					<a href="dostavka.php" class="nav-link waves-effect waves-light">ДОСТАВКА</a>
+					<a href="delivery.php" class="nav-link waves-effect waves-light">ДОСТАВКА</a>
 				</li>
 				<li class="nav-item">
 					<a href="index.php#yak1" class="nav-link waves-effect waves-light">АКЦИИ</a>
-					
 				</li>
 				<li class="nav-item">
-					<a href="#yak2" class="nav-link waves-effect waves-light">КОНТАКТЫ</a>
-				</li>
-				<li class="nav-item">
-					<a href="registr.php" class="nav-link">Войти/Зарегистрироваться</a>
+					<a href="register.php" class="nav-link">ВОЙТИ/ЗАРЕГИСТРИРОВАТЬСЯ</a>
 				</li>
 			</ul>
             <?php
             if (!empty($_COOKIE['user'])) :
                 ?>
 
-
-                <li class="nav-link" >Привет, <?= $_COOKIE['user'] ?>.<a href="registr.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
+                <li class="nav-link" >Привет, <?= $_COOKIE['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
             <?php
             endif;
             ?>

@@ -40,20 +40,15 @@
 <li class="nav-item">
 <a href="index.php#yak1" class="nav-link waves-effect waves-light">АКЦИИ</a>
 </li>
-<li class="nav-item">
-<a href="index.php#yak2" class="nav-link waves-effect waves-light">КОНТАКТЫ</a>
-</li>
     <li class="nav-item">
-        <a href="register.php" class="nav-link">Войти/Зарегистрироваться</a>
+        <a href="register.php" class="nav-link">ВОЙТИ/ЗАРЕГИСТРИРОВАТЬСЯ</a>
     </li>
 </ul>
 
     <?php
-    if (!empty($_SESSION['user'])) :
+    if (!empty($_COOKIE['user'])) :
         ?>
-
-
-        <li class="nav-link" >Привет, <?= $_SESSION['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
+        <li class="nav-link" >Привет, <?= $_COOKIE['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
     <?php
     endif;
     ?>
@@ -61,9 +56,7 @@
 </nav>
 
 <div class="text-center mb-4">
-
 <h1 align="center" class="text-uppercase font-weight-bold" id="h1_for_menu">МЕНЮ</h1>
-
 </div>
 
 </header>
@@ -362,7 +355,6 @@
 </div>
 </div>
 </footer>
-
 
   <!-- jQuery -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
