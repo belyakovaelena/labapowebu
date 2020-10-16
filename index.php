@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,60 +22,66 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
-		<div class="container">
-		
-			<a href="#" class="navbar-brand waves-effect">Столовая "У деффчонок!"</a>
-			
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand waves-effect">Столовая "У деффчонок!"</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="
 			#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="
 			Toggle Navigation">
-			<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="basicExampleNav">
-				<ul class="navbar-nav  smooth-scroll">
-					<li class="nav-item">
-						<a href="menu.php" class="nav-link waves-effect waves-light">МЕНЮ</a>
-					</li>
-					<li class="nav-item">
-						<a href="delivery.php" class="nav-link waves-effect waves-light">ДОСТАВКА</a>
-					</li>
-					<li class="nav-item">
-						<a href="#yak1" class="nav-link waves-effect waves-light">АКЦИИ</a>
-					</li>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+                <ul class="navbar-nav  smooth-scroll">
+                    <li class="nav-item">
+                        <a href="menu.php" class="nav-link waves-effect waves-light">МЕНЮ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="delivery.php" class="nav-link waves-effect waves-light">ДОСТАВКА</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#yak1" class="nav-link waves-effect waves-light">АКЦИИ</a>
+                    </li>
 
-					<li class="nav-item">
-						<a href="register.php" class="nav-link">ВОЙТИ/ЗАРЕГИСТРИРОВАТЬСЯ</a>
+                    <?php
+                    if(empty($_SESSION['user'])){
+                        ?>
 
-					</li>
-				</ul>
-                <?php
-                if (!empty($_COOKIE['user'])) :
+                        <li class="nav-item">
+                            <a href="register.php" class="nav-link">ВОЙТИ/ЗАРЕГИСТРИРОВАТЬСЯ
+
+                            </a>
+                        </li>
+                        <?php
+                    }
                     ?>
-                    <li class="nav-link" >Привет, <?= $_COOKIE['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
+                </ul>
+                <?php
+                if (!empty($_SESSION['user'])) :
+                    ?>
+                    <li class="nav-link" >Привет, <?= $_SESSION['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
                 <?php
                 endif;
                 ?>
-	    	</div>
-		</div>
-	</nav>
-	<div id="intro" class="view">
-		<div class="mask rgba-black-strong">
-			<div class="container-fluid d-flex align-items-center justify-content-center h-100">
-				<div class="row d-flex justify-content-center text-center">
-				
-					<div class="text-center white-text mx-5 wow fadeIn">
-						<h1 class="mb-4">
-						<strong>Столовая<br>"у деффчонок"</br></strong></h1>
-						<hr class="hr-light">
-						<h4 class="white-text my-4">Адрес столовой</h4>
-					</div>
-				</div>
-			</div>
-		</div> 
-	</div>
-  </header>
+            </div>
+        </div>
+    </nav>
+    <div id="intro" class="view">
+        <div class="mask rgba-black-strong">
+            <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+                <div class="row d-flex justify-content-center text-center">
+                    <div class="text-center white-text mx-5 wow fadeIn">
+                        <h1 class="mb-4">
+                            <strong>Столовая<br>"у деффчонок"</br></strong></h1>
+                        <hr class="hr-light">
+                        <h4 class="white-text my-4">Адрес столовой</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 <main class="mt-5">
 	<div class="container">
 		<section id="best-features" class="text-center">

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,14 +42,23 @@
                     <li class="nav-item">
                         <a href="delivery.php" class="nav-link waves-effect waves-light">ДОСТАВКА</a>
                     </li>
+                    <?php
+                    if(empty($_SESSION['user'])){
+                    ?>
+
                     <li class="nav-item">
-                        <a href="register.php" class="nav-link">ВОЙТИ/ЗАРЕГИСТРИРОВАТЬСЯ</a>
+                        <a href="register.php" class="nav-link">ВОЙТИ/ЗАРЕГИСТРИРОВАТЬСЯ
+
+                        </a>
                     </li>
+                    <?php
+                    }
+                    ?>
                 </ul>
                 <?php
-                if (!empty($_COOKIE['user'])) :
+                if (!empty($_SESSION['user'])) :
                     ?>
-                    <li class="nav-link" >Привет, <?= $_COOKIE['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
+                    <li class="nav-link" >Привет, <?= $_SESSION['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
                 <?php
                 endif;
                 ?>
@@ -55,7 +67,7 @@
     </nav>
 </header>
 <?php
-if($_COOKIE['user'] == ''):
+if($_SESSION['user'] == ''):
 ?>
 <div class="row">
     <div class="col">
@@ -102,7 +114,7 @@ if($_COOKIE['user'] == ''):
             <?php else: ?>
                 <?php
                 $mysql = new mysqli('localhost','root','root','register-bd');
-                $name = $_COOKIE['user'];
+                $name = $_SESSION['user'];
                 $result= $mysql->query("SELECT `login` FROM `users` WHERE `name` = '$name'");
                 $arr=$result->fetch_assoc();
                 $login=$arr['login'];
@@ -122,7 +134,7 @@ if($_COOKIE['user'] == ''):
                         <div class="row mt-3">
                             <div class="col-md-2 col-lg-7 col-xl-8 mb-4">
                                 <h3>Информация о пользователе</h3><br>
-                                <p>Имя: <?= $_COOKIE['user'] ?></p><br>
+                                <p>Имя: <?= $_SESSION['user'] ?></p><br>
                                 <p>login: <?=$login?></p>
                             </div>
                         </div>

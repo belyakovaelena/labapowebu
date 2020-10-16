@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,68 +23,24 @@
 </head>
 <body>
 
-  <header id="menu">
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
-		<div class="container">
-		
-			<a href="index.php" class="navbar-brand waves-effect">Столовая "У деффчонок!"</a>
-			
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="
-			#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="
-			Toggle Navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="basicExampleNav">
-			<ul class="navbar-nav mr-auto smooth-scroll">
-				<li class="nav-item">
-					<a href="menu.php" class="nav-link waves-effect waves-light">МЕНЮ</a>
-				</li>
-				<li class="nav-item">
-					<a href="delivery.php" class="nav-link waves-effect waves-light">ДОСТАВКА</a>
-				</li>
-				<li class="nav-item">
-					<a href="index.php#yak1" class="nav-link waves-effect waves-light">АКЦИИ</a>
-				</li>
-				<li class="nav-item">
-					<a href="register.php" class="nav-link">ВОЙТИ/ЗАРЕГИСТРИРОВАТЬСЯ</a>
-				</li>
-			</ul>
-            <?php
-            if (!empty($_COOKIE['user'])) :
-                ?>
-
-                <li class="nav-link" >Привет, <?= $_COOKIE['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
-            <?php
-            endif;
-            ?>
-	    </div>
-	</nav>
-	
-	
-	<div class="text-center mb-4">
-
-	<h1 align="center" class="text-uppercase font-weight-bold" id="h1_for_menu">ДОСТАВКА</h1>
-
-	</div>
-
+<header id="menu">
+    <?php include_once 'header_for_delivery_and_menu.php'; ?>
+    <div class="text-center mb-4">
+        <h1 align="center" class="text-uppercase font-weight-bold" id="h1_for_menu">ДОСТАВКА</h1>
+    </div>
 </header>
 
 <main class="mt-5 pt-4">
-
-
 <div class="container">
   <div class="row">
-  
      <!-- Бесплатная доставка -->
     <div class="col-sm">
       <div class="view overlay zoom">
 	  <img src="img/dostavka.jpg" alt="Бесплатная доставка" class="img- fluid" align="center">
 	  <div class="mask flex-center"></div>
 	  </div>
-	  
 	  <h4 class="my-5 font-weight-bold">от 500 руб</h4>
 	  <p > ПЛАТНАЯ ДОСТАВКА </p>
-	  
     </div>
 	
 	<!-- Подарок от 1000 -->

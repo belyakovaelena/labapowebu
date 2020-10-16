@@ -1,4 +1,5 @@
 <?php
+session_start();
 $login = filter_var(trim($_POST['login']), FILTER_SANITIZE_STRING);
 $pass = filter_var(trim($_POST['pass']), FILTER_SANITIZE_STRING);
 $pass = md5($pass."ktyf0301");
@@ -19,8 +20,7 @@ if (!$check_if) {
     <?php
     exit();
 }
-
-setcookie('user', $user['name'], time() + 3600, "/");
+$_SESSION["user"] = $user['name'];
 $mysql->close();
 header('Location: ../register.php');
 ?>
