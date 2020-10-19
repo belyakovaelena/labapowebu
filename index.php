@@ -18,8 +18,11 @@ session_start();
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Material Design Bootstrap -->
   <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 <body>
 <header>
@@ -67,6 +70,7 @@ session_start();
             </div>
         </div>
     </nav>
+
     <div id="intro" class="view">
         <div class="mask rgba-black-strong">
             <div class="container-fluid d-flex align-items-center justify-content-center h-100">
@@ -74,12 +78,19 @@ session_start();
                     <div class="text-center white-text mx-5 wow fadeIn">
                         <h1 class="mb-4">
                             <strong>Столовая<br>"у деффчонок"</br></strong></h1>
-                        <hr class="hr-light">
-                        <h4 class="white-text my-4">Адрес столовой</h4>
+                        <h4 class="white-text my-4">Адрес столовой</h4><br>
+                        <div class="search-box">
+                            <input type="text" class="search-txt" placeholder="Поиск">
+                            <a href="#" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+
+
                     </div>
                 </div>
+
             </div>
         </div>
+
     </div>
 </header>
 <main class="mt-5">
@@ -126,7 +137,7 @@ session_start();
 					<div class="mask flex-center"></div>
 					</div>
 					
-					<h4 class="my-5 font-weight-bold"><a href="menu.html#yak_drinks"  class="text-dark">НАПИТКИ</a></h4>
+					<h4 class="my-5 font-weight-bold"><a href="menu.php#yak_drinks"  class="text-dark">НАПИТКИ</a></h4>
 					<p class="grey-text"> берешь два напитка а платишь за один </p>
 				</div>	
 			</div>

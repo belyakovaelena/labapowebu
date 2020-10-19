@@ -17,6 +17,48 @@ html,body,header, #intro{
 		height: 100%;
 }
 
+.search-box {
+	display: flex;
+	position: absolute;
+	background-color: #2f3640;
+	height:50px;
+	width: 270px;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.search-btn {
+	display: block;
+	justify-content: center;
+	align-items: center;
+	color: #f0f0f0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #2f3640;
+	text-decoration: none;
+}
+
+.search-txt {
+	border: none;
+	outline: none;
+	background: none;
+	padding: 2px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 40px;
+
+}
+
+.search-box:hover .search-txt {
+	width: 200px;
+	padding: 1px 3px;
+}
+
+.search-box:hover .search-btn {
+	background-color: #2b2b2b;
+	padding:6px;
+}
 #intro{
 	background: url(../img/img_9728.jpg) no-repeat center center fixed;
 	
