@@ -43,10 +43,10 @@ function searchOnPage($link, $query, $page_name)
 
 $search_query = clearQuery($_POST['search']);
 $indexed_pages = [
-  "Главная страница" => "http://localhost/index.php#",
-  "Меню" => "http://localhost/menu.php",
-  "доставка" => "http://localhost/delivery.php",
-  "Кабинет" => "http://localhost/register.php",
+  "Главная страница" => "http://labapowebu/index.php#",
+  "Меню" => "http://labapowebu/menu.php",
+  "доставка" => "http://labapowebu/delivery.php",
+  "Кабинет" => "http://labapowebu/register.php",
 
 ];
 $results = [];
