@@ -79,12 +79,13 @@ session_start();
                         <h1 class="mb-4">
                             <strong>Столовая<br>"у деффчонок"</br></strong></h1>
                         <h4 class="white-text my-4">Адрес столовой</h4><br>
-                        <div class="search-box">
-                            <input type="text" class="search-txt" placeholder="Поиск">
-                            <a href="#" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></a>
-                        </div>
-
-
+                        
+                        <form class="form" action="search.php" method="POST">
+                            <div class="search-box">
+                             <input type="text" class="search-txt" placeholder="Поиск" name="search">
+                                 <button href="#" class="search-btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </form>
                     </div>
                 </div>
 

@@ -43,11 +43,12 @@ function searchOnPage($link, $query, $page_name)
 
 $search_query = clearQuery($_POST['search']);
 $indexed_pages = [
-  "Главная страница" => "http://localhost/index.php#",
-  "Меню" => "http://localhost/menu.php",
-  "доставка" => "http://localhost/delivery.php",
-  "Кабинет" => "http://localhost/register.php",
-
+  "Главная страница" => "http://localhost/web-volsu-lab_3/frontend/index.html",
+  "Меню" => "http://localhost/frontend/web-volsu-lab_3/routes/menu.php",
+  "Продукты" => "http://localhost/web-volsu-lab_3/frontend/routes/products.php",
+  "Кабинет" => "http://localhost/web-volsu-lab_3/frontend/routes/profile.php",
+  "Корзина" => "http://localhost/web-volsu-lab_3/frontend/routes/busket.php",
+  //http://localhost/web-volsu-lab_3/frontend/routes/menu.php
 ];
 $results = [];
 
@@ -63,4 +64,4 @@ $_SESSION['debug'] = $_SERVER['HTTP_REFERER'];
 
 $return_link = $_SERVER['HTTP_REFERER'];
 
-header("Location: answer.php");
+header("Location: $return_link");

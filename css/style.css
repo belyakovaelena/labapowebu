@@ -16,12 +16,11 @@ header#menu{
 html,body,header, #intro{
 		height: 100%;
 }
-
 .search-box {
 	display: flex;
 	position: absolute;
 	background-color: #2f3640;
-	height:50px;
+	height:60px;
 	width: 270px;
 	border-radius: 20px;
 	padding: 10px;
@@ -48,11 +47,6 @@ html,body,header, #intro{
 	font-size: 16px;
 	line-height: 40px;
 
-}
-
-.search-box:hover .search-txt {
-	width: 200px;
-	padding: 1px 3px;
 }
 
 .search-box:hover .search-btn {
