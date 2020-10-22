@@ -12,7 +12,6 @@ function searchOnPage($link, $query, $page_name)//ссылка,выражени�
 {
   $text = file_get_contents($link);//скачивает информацию со страницы в переменную $text
 
-  //preg_replace ищет теги и убирает
   preg_match("/<body.*\/body>/s", $text, $html_body);//ищет в строке совпадения
 
   $text = strip_tags($html_body[0]); // оставляет только текст, убирает теги
@@ -39,15 +38,6 @@ function searchOnPage($link, $query, $page_name)//ссылка,выражени�
 }
 
 $search_query = clearQuery($_POST['search']);
-
-$indexed_pages = [ //ключи
-    "menu" => "http://labapowebu//html/menu.html",
-    "delivery" => "http://labapowebu//html/delivery.html",
-    "Главная страница" => "http://labapowebu/index.php#",
-    "Меню" => "http://labapowebu/menu.php",
-    "доставка" => "http://labapowebu/delivery.php",
-    "Кабинет" => "http://labapowebu/register.php",
-];
 $indexed_pages = array_slice(scandir('./html/'), 2);
 $results = [];
 
