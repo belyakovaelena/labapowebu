@@ -24,8 +24,9 @@ html,body,header, #intro{
 	width: 270px;
 	border-radius: 20px;
 	padding: 10px;
-}
 
+}
+*{outline: none!important;}
 .search-btn {
 	display: block;
 	justify-content: center;
@@ -36,6 +37,7 @@ html,body,header, #intro{
 	border-radius: 50%;
 	background-color: #2f3640;
 	text-decoration: none;
+	border: none;
 }
 
 .search-txt {

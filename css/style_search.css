@@ -1,0 +1,15 @@
+html,body,header, #intro{
+    height: 100%;
+}
+#intro{
+    background: url(../img/mramor34.jpg) no-repeat center center fixed;
+
+}
+.top-nav-collapse{
+    background-color: #24355C;
+}
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse){
+        background: #24355C;
+    }
+}
