@@ -18,6 +18,7 @@
                     <li class="nav-item">
                         <a href="index.php#yak1" class="nav-link waves-effect waves-light">АКЦИИ</a>
                     </li>
+
                     <?php
                     if(empty($_SESSION['user'])){
                         ?>
@@ -29,7 +30,15 @@
                     }
                     ?>
                 </ul>
-
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link waves-effect">
+                            <span class="bage red z-depth-1 mr-1">12</span>
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="clearfix d-none d-sm-inline-block">Корзина</span>
+                        </a>
+                    </li>
+                </ul>
                 <?php
                 if (!empty($_SESSION['user'])) :
                     ?>

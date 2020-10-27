@@ -4,27 +4,27 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Онлайн столовая "У деффчонок"</title>
-  <!-- MDB icon -->
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <!-- Google Fonts Roboto -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="css/mdb.min.css">
-  <!-- Your custom styles (optional) -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Онлайн столовая "У деффчонок"</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="menu">
 
-<?php include_once 'header_for_delivery_and_menu.php'; ?>
+    <?php include_once 'header_for_delivery_and_menu.php'; ?>
 
 
 </header>
@@ -38,10 +38,10 @@ session_start();
             <div class="collapse navbar-collapse" id="nextNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Салаты и холодные закуски</a>
+                        <a href="menu.php" class="nav-link">Салаты и холодные закуски</a>
                     </li>
                     <li class="nav-item">
-                        <a href="menu_2.php" class="nav-link">Первые и вторые блюда</a>
+                        <a href="#" class="nav-link">Первые и вторые блюда</a>
                     </li>
                     <li class="nav-item">
                         <a href="menu_3.php" class="nav-link">Десерты и напитки</a>
@@ -62,7 +62,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\oliv.jpg" alt="оливье">
+                            <img class="card-img-top" src="img\12.jpg" alt="мясо с овощами">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -70,17 +70,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Салат</h5>
+                                <h5>Второе</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Оливье
-                                    <span class="badge badge-pill danger-color">NEW</span>
+                                    <a href="#" class="dark-grey-text">Мясо с овощами
+                                        <span class="badge badge-pill danger-color">NEW</span>
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>45 руб.</strong>
+                                <strong>138 руб.</strong>
                             </h4>
                         </div>
                     </div>
@@ -90,7 +90,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\pitas.jpeg" alt="пита с ветчиной">
+                            <img class="card-img-top" src="img\13.jpg" alt="ребрышки">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -98,17 +98,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Закуска</h5>
+                                <h5>Второе</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Пита с ветчиной
+                                    <a href="#" class="dark-grey-text">Ребрышки
                                         <span class="badge badge-pill danger-color">NEW</span>
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>125 руб.(2 шт)</strong>
+                                <strong>225 руб.</strong>
                             </h4>
                         </div>
                     </div>
@@ -118,7 +118,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\midii.jpg" alt="мидии">
+                            <img class="card-img-top" src="img\14.jpg" alt="гуляш">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -126,17 +126,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Закуска</h5>
+                                <h5>Второе</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Мидии
+                                    <a href="#" class="dark-grey-text">Гуляш
                                         <span class="badge badge-pill danger-color">NEW</span>
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>85 руб.</strong>
+                                <strong>155 руб.</strong>
                             </h4>
                         </div>
                     </div>
@@ -146,7 +146,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\zezar.png" alt="цезарь">
+                            <img class="card-img-top" src="img\21.jpg" alt="свинина">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -154,17 +154,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Салат</h5>
+                                <h5>Второе</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Цезарь
+                                    <a href="#" class="dark-grey-text">Свинина
                                         <span class="badge badge-pill danger-color">NEW</span>
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>75 руб.</strong>
+                                <strong>175 руб.</strong>
                             </h4>
                         </div>
                     </div>
@@ -178,7 +178,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\baklan.jpg" alt="рулетики из баклажанов">
+                            <img class="card-img-top" src="img\22.jpeg" alt="суп из брокколи">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -186,17 +186,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Закуска</h5>
+                                <h5>Первое</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Рулеты из баклажанов
+                                    <a href="#" class="dark-grey-text">суп с брокколи и курицей
 
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>73 руб.(2 шт)</strong>
+                                <strong>123 руб</strong>
                             </h4>
                         </div>
                     </div>
@@ -206,7 +206,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\vegetabl.jpg" alt="корзинки с овощами">
+                            <img class="card-img-top" src="img\23.jpg" alt="запеченые овощи">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -214,17 +214,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Закуска</h5>
+                                <h5>Второе</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Овощная корина (помидор/перец)
+                                    <a href="#" class="dark-grey-text">Запеченые овощи с травами
 
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>35 руб (1 шт)</strong>
+                                <strong>87 руб</strong>
                             </h4>
                         </div>
                     </div>
@@ -234,7 +234,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\ruleti.png" alt="рулеты">
+                            <img class="card-img-top" src="img\25.jpg " alt="плов">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -242,17 +242,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Закуска</h5>
+                                <h5>Второе</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Крабовые рулеты с зеленью
+                                    <a href="#" class="dark-grey-text">Плов с курицей и овощами
 
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>85 руб.</strong>
+                                <strong>95 руб.</strong>
                             </h4>
                         </div>
                     </div>
@@ -262,7 +262,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\saladmakaron.jpg" alt="салат с макаронами">
+                            <img class="card-img-top" src="img\26.jpg" alt="куриный суп">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -270,17 +270,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Салат</h5>
+                                <h5>Первое</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Макаронный рай (c помидорами)
+                                    <a href="#" class="dark-grey-text">Куриный суп со сметаной
 
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>55 руб.</strong>
+                                <strong>95 руб.</strong>
                             </h4>
                         </div>
                     </div>
@@ -292,7 +292,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\venegret.jpg" alt="винегрет">
+                            <img class="card-img-top" src="img\31.jpg" alt="шашлык">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -300,17 +300,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Салат</h5>
+                                <h5>Второе</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Винегрет
+                                    <a href="#" class="dark-grey-text">Шашлык
 
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>37 руб.</strong>
+                                <strong>120 руб.</strong>
                             </h4>
                         </div>
                     </div>
@@ -319,7 +319,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\kraboviy.jpg" alt="крабовый салат">
+                            <img class="card-img-top" src="img\32.jpg" alt="суп из томатов">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -327,17 +327,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Салат</h5>
+                                <h5>Первое</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Крабовые салат
+                                    <a href="#" class="dark-grey-text">Томатный суп
 
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>45 руб.</strong>
+                                <strong>105 руб.</strong>
                             </h4>
                         </div>
                     </div>
@@ -346,7 +346,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\salatik.jpg" alt="салат">
+                            <img class="card-img-top" src="img\33.jpg" alt="суп сырный ">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -354,11 +354,11 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Салат</h5>
+                                <h5>Первое</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Нежный
+                                    <a href="#" class="dark-grey-text">Сырный суп
 
                                     </a>
                                 </strong>
@@ -374,7 +374,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\kruasani.jpg" alt="круасаны с рыбой">
+                            <img class="card-img-top" src="img\34.jpg" alt="котлета с пюре">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -382,17 +382,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Закуска</h5>
+                                <h5>Второе</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Круасаны с рыбой
+                                    <a href="#" class="dark-grey-text">Котлета с пюре
 
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>68 руб.</strong>
+                                <strong>114 руб.</strong>
                             </h4>
                         </div>
                     </div>
@@ -422,8 +422,6 @@ session_start();
                     <a href="" class="page-link" aria-label="Previous">
                         <span aria-hidden="true">3</span>
                     </a>
-                </li>
-
                 <li class="page-item ">
                     <a href="" class="page-link" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
@@ -433,17 +431,15 @@ session_start();
         </nav>
     </div>
 </main>
-
-  <!-- jQuery -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Your custom scripts (optional) -->
+<script type="text/javascript"></script>
 
 </body>
 </html>

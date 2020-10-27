@@ -4,27 +4,27 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Онлайн столовая "У деффчонок"</title>
-  <!-- MDB icon -->
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <!-- Google Fonts Roboto -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="css/mdb.min.css">
-  <!-- Your custom styles (optional) -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Онлайн столовая "У деффчонок"</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="menu">
 
-<?php include_once 'header_for_delivery_and_menu.php'; ?>
+    <?php include_once 'header_for_delivery_and_menu.php'; ?>
 
 
 </header>
@@ -38,13 +38,13 @@ session_start();
             <div class="collapse navbar-collapse" id="nextNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Салаты и холодные закуски</a>
+                        <a href="menu.php" class="nav-link">Салаты и холодные закуски</a>
                     </li>
                     <li class="nav-item">
                         <a href="menu_2.php" class="nav-link">Первые и вторые блюда</a>
                     </li>
                     <li class="nav-item">
-                        <a href="menu_3.php" class="nav-link">Десерты и напитки</a>
+                        <a href="#" class="nav-link">Десерты и напитки</a>
                     </li>
 
                 </ul>
@@ -62,7 +62,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\oliv.jpg" alt="оливье">
+                            <img class="card-img-top" src="img\18.jpg" alt="шоколадный мусс">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -70,95 +70,11 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Салат</h5>
+                                <h5>Десерты</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Оливье
-                                    <span class="badge badge-pill danger-color">NEW</span>
-                                    </a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>45 руб.</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 nb-4">
-                    <div class="card">
-
-                        <div class="view overlay">
-                            <img class="card-img-top" src="img\pitas.jpeg" alt="пита с ветчиной">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Закуска</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Пита с ветчиной
-                                        <span class="badge badge-pill danger-color">NEW</span>
-                                    </a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>125 руб.(2 шт)</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 nb-4">
-                    <div class="card">
-
-                        <div class="view overlay">
-                            <img class="card-img-top" src="img\midii.jpg" alt="мидии">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Закуска</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Мидии
-                                        <span class="badge badge-pill danger-color">NEW</span>
-                                    </a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>85 руб.</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 nb-4">
-                    <div class="card">
-
-                        <div class="view overlay">
-                            <img class="card-img-top" src="img\zezar.png" alt="цезарь">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Салат</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Цезарь
+                                    <a href="#" class="dark-grey-text">Шоколадный мусс
                                         <span class="badge badge-pill danger-color">NEW</span>
                                     </a>
                                 </strong>
@@ -169,6 +85,90 @@ session_start();
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-3 col-md-6 nb-4">
+                    <div class="card">
+
+                        <div class="view overlay">
+                            <img class="card-img-top" src="img\74.jpg" alt="мороженное">
+                            <a href="">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body text-center">
+                            <a href="" class="grey-text">
+                                <h5>Десерты</h5>
+                            </a>
+                            <h5>
+                                <strong>
+                                    <a href="#" class="dark-grey-text">мороженное в ассортименте
+
+                                    </a>
+                                </strong>
+                            </h5>
+                            <h4 class="font-weight-bold blue-text">
+                                <strong>125 руб.(4 шарика)</strong>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 nb-4">
+                    <div class="card">
+
+                        <div class="view overlay">
+                            <img class="card-img-top" src="img\56.jpg" alt="смузи">
+                            <a href="">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body text-center">
+                            <a href="" class="grey-text">
+                                <h5>Напитки</h5>
+                            </a>
+                            <h5>
+                                <strong>
+                                    <a href="#" class="dark-grey-text">смузи в ассортименте
+                                        <span class="badge badge-pill danger-color">NEW</span>
+                                    </a>
+                                </strong>
+                            </h5>
+                            <h4 class="font-weight-bold blue-text">
+                                <strong>65 руб.</strong>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 nb-4">
+                    <div class="card">
+
+                        <div class="view overlay">
+                            <img class="card-img-top" src="img\66.jpg" alt="панкейк">
+                            <a href="">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body text-center">
+                            <a href="" class="grey-text">
+                                <h5>Десерты</h5>
+                            </a>
+                            <h5>
+                                <strong>
+                                    <a href="#" class="dark-grey-text">Панкейк cо взбитыми сливками
+
+                                    </a>
+                                </strong>
+                            </h5>
+                            <h4 class="font-weight-bold blue-text">
+                                <strong>55 руб. (2 шт.)</strong>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
             </div>
             <br>
 
@@ -178,7 +178,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\baklan.jpg" alt="рулетики из баклажанов">
+                            <img class="card-img-top" src="img\46.jpg" alt="компот">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -186,17 +186,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Закуска</h5>
+                                <h5>Напитки</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Рулеты из баклажанов
+                                    <a href="#" class="dark-grey-text">Компот из ягод и фруктов
 
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>73 руб.(2 шт)</strong>
+                                <strong>33 руб.</strong>
                             </h4>
                         </div>
                     </div>
@@ -206,7 +206,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\vegetabl.jpg" alt="корзинки с овощами">
+                            <img class="card-img-top" src="img\00.jpg" alt="сангрия">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -214,17 +214,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Закуска</h5>
+                                <h5>Напитки</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Овощная корина (помидор/перец)
+                                    <a href="#" class="dark-grey-text">Сангрия на основе фруктов
 
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>35 руб (1 шт)</strong>
+                                <strong>53 руб </strong>
                             </h4>
                         </div>
                     </div>
@@ -234,7 +234,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\ruleti.png" alt="рулеты">
+                            <img class="card-img-top" src="img\20.jpg" alt="кекс с ягодами">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -242,17 +242,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Закуска</h5>
+                                <h5>Десерты</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Крабовые рулеты с зеленью
+                                    <a href="#" class="dark-grey-text">Горячий шоколадный кекс
 
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>85 руб.</strong>
+                                <strong>125 руб.</strong>
                             </h4>
                         </div>
                     </div>
@@ -262,7 +262,7 @@ session_start();
                     <div class="card">
 
                         <div class="view overlay">
-                            <img class="card-img-top" src="img\saladmakaron.jpg" alt="салат с макаронами">
+                            <img class="card-img-top" src="img\777.jpg" alt="глинтвейн">
                             <a href="">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -270,129 +270,17 @@ session_start();
 
                         <div class="card-body text-center">
                             <a href="" class="grey-text">
-                                <h5>Салат</h5>
+                                <h5>Напитки</h5>
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Макаронный рай (c помидорами)
+                                    <a href="#" class="dark-grey-text">Глинтвейн с корицей и апельсином
 
                                     </a>
                                 </strong>
                             </h5>
                             <h4 class="font-weight-bold blue-text">
-                                <strong>55 руб.</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row wow fadeIn">
-                <div class="col-lg-3 col-md-6 nb-4">
-                    <div class="card">
-
-                        <div class="view overlay">
-                            <img class="card-img-top" src="img\venegret.jpg" alt="винегрет">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Салат</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Винегрет
-
-                                    </a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>37 руб.</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 nb-4">
-                    <div class="card">
-
-                        <div class="view overlay">
-                            <img class="card-img-top" src="img\kraboviy.jpg" alt="крабовый салат">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Салат</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Крабовые салат
-
-                                    </a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>45 руб.</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 nb-4">
-                    <div class="card">
-
-                        <div class="view overlay">
-                            <img class="card-img-top" src="img\salatik.jpg" alt="салат">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Салат</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Нежный
-
-                                    </a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>92 руб </strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 nb-4">
-                    <div class="card">
-
-                        <div class="view overlay">
-                            <img class="card-img-top" src="img\kruasani.jpg" alt="круасаны с рыбой">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Закуска</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Круасаны с рыбой
-
-                                    </a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>68 руб.</strong>
+                                <strong>65 руб.</strong>
                             </h4>
                         </div>
                     </div>
@@ -423,7 +311,6 @@ session_start();
                         <span aria-hidden="true">3</span>
                     </a>
                 </li>
-
                 <li class="page-item ">
                     <a href="" class="page-link" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
@@ -433,17 +320,15 @@ session_start();
         </nav>
     </div>
 </main>
-
-  <!-- jQuery -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Your custom scripts (optional) -->
+<script type="text/javascript"></script>
 
 </body>
 </html>
