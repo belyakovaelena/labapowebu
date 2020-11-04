@@ -15,6 +15,7 @@ color: #ffffff;
 	width: 550px;
 	position: absolute;
 	left: 18%;
+	bottom: 50%;
 	background: rgba(0,0,0,.6);
 }
 .form h1{

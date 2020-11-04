@@ -45,7 +45,10 @@ session_start();
                     <li class="nav-item">
                         <a href="#yak1" class="nav-link waves-effect waves-light">АКЦИИ</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a href="dish.php" class="nav-link">ДОБАВИТЬ БЛЮДО
+                        </a>
+                    </li>
                     <?php
                     if(empty($_SESSION['user'])){
                         ?>
@@ -66,6 +69,7 @@ session_start();
                 <?php
                 endif;
                 ?>
+
             </div>
         </div>
     </nav>

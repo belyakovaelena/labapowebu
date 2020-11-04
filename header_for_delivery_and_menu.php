@@ -29,6 +29,10 @@
                         <?php
                     }
                     ?>
+                    <li class="nav-item">
+                        <a href="dish.php" class="nav-link">ДОБАВИТЬ БЛЮДО
+                        </a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav nav-flex-icons">
                     <li class="nav-item">

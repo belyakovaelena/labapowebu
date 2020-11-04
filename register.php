@@ -42,6 +42,10 @@ session_start();
                     <li class="nav-item">
                         <a href="delivery.php" class="nav-link waves-effect waves-light">ДОСТАВКА</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="dish.php" class="nav-link">ДОБАВИТЬ БЛЮДО
+                        </a>
+                    </li>
                     <?php
                     if(empty($_SESSION['user'])){
                     ?>

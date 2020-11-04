@@ -1,0 +1,86 @@
+body{
+    background: url(../img/img_9728.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+h1{
+    padding-top: 90px;
+    color: #ffffff;
+}
+
+.form{
+    width: 550px;
+    position: absolute;
+    left: 31%;
+    background: rgba(0,0,0,.6);
+}
+.form h1{
+    margin: 30px 100px;
+    padding: 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.input-form {
+    margin: 15px 40px;
+    text-align: center;
+}
+.input-form input{
+    padding: 10px;
+    width: 100%;
+    color: #ffffff;
+    font-size: 20px;
+    background: none;
+    outline: none;
+    border:1px solid #ffffff;
+    box-sizing: border-box;
+}
+.input-form input[type="text"]:focus, .input-form input[type="password"]:focus{
+    border: 2px solid #0fc3f5;
+}
+
+.input-form input[type="submit"] {
+    margin-top: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    background: #151E1E;
+    transition: .3s;
+}
+.input-form input[type="submit"]:hover{
+    background: #4442db;
+}
+.form a{
+    display: block;
+    padding: 0 0 30px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+.form a:hover{
+    COLOR: #0fc3f5;
+}
+
+.container h1{
+    font-weight: normal;
+    margin-top: 0;
+    padding-top: 34px;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 0;
+    color: #0e4377;
+
+}
+.container h2{
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 0;
+    color: #44fdbd;
+}
