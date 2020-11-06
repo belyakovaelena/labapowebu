@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,9 +22,9 @@
     <link rel="stylesheet" href="css/style_dish.css">
 </head>
 <body>
-<header>
+<header id="menu">
     <div class="text-center mb-4">
-        <h1 align="center" class="text-uppercase font-weight-bold" >ТУТ ВЫ МОЖЕТЕ ДОБАВИТЬ БЛЮДО</h1>
+
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
         <div class="container">
@@ -44,11 +47,6 @@
                             <a href="register.php" class="nav-link">ВОЙТИ/ЗАРЕГИСТРИРОВАТЬСЯ
                             </a>
                         </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">ДОБАВИТЬ БЛЮДО
-                        </a>
-                    </li>
-
                 </ul>
 
             </div>
@@ -56,11 +54,9 @@
     </nav>
 </header>
 
-<div class="row">
-    <div class="col">
         <div class="form">
             <h1>ДОБАВИТЬ БЛЮДО</h1>
-            <form action="check.php" method="post">
+            <form action="add_dish.php" method="post">
                 <div class="input-form">
                     <input type="text" name="dish" id="name" placeholder="Введите название блюда">
                 </div>
@@ -79,10 +75,12 @@
                 <div class="input-form">
                     <input type="submit" value="ДОБАВИТЬ">
                 </div>
+                <div class="input-form">
+                    <input type="submit" value="ПОСМОТРЕТЬ ТАБЛИЦУ">
+                </div>
             </form>
         </div>
-    </div>
-</div>
+
 <main>
 
     <script type="text/javascript" src="js/jquery.min.js"></script>

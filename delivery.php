@@ -25,9 +25,7 @@ session_start();
 
 <header id="menu">
     <?php include_once 'header_for_delivery_and_menu.php'; ?>
-    <div class="text-center mb-4">
-        <h1 align="center" class="text-uppercase font-weight-bold" id="h1_for_menu">ДОСТАВКА</h1>
-    </div>
+
 </header>
 
 <main class="mt-5 pt-4">

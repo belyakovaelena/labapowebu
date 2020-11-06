@@ -1,8 +1,12 @@
 body{
-    background: url(../img/img_9728.jpg);
+    background: url(../img/0C3A7354_web.jpg);
     background-size: cover;
     background-attachment: fixed;
     font-family: sans-serif;
+}
+header#menu{
+    background-color: #151E1E;
+    height: 15%;
 }
 
 h1{
@@ -11,9 +15,11 @@ h1{
 }
 
 .form{
-    width: 550px;
+   width: 550px;
     position: absolute;
-    left: 31%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     background: rgba(0,0,0,.6);
 }
 .form h1{
@@ -38,7 +44,7 @@ h1{
     border:1px solid #ffffff;
     box-sizing: border-box;
 }
-.input-form input[type="text"]:focus, .input-form input[type="password"]:focus{
+.input-form input[type="text"]:focus{
     border: 2px solid #0fc3f5;
 }
 
