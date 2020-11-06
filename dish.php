@@ -70,13 +70,14 @@ session_start();
                     <input type="text" name="calories" id="calories" placeholder="Количество калорий">
                 </div>
                 <div class="input-form">
-                    <input type="text" name="time" id="time" placeholder="Время приготовления">
+                    <input type="text" name="time" id="time" placeholder="Время приготовления(часы:минуты:секунды)">
                 </div>
                 <div class="input-form">
                     <input type="submit" value="ДОБАВИТЬ">
                 </div>
                 <div class="input-form">
-                    <input type="submit" value="ПОСМОТРЕТЬ ТАБЛИЦУ">
+                    <a class="button" href="output_table.php">ПОСМОТРЕТЬ ТАБЛИЦУ</a>
+
                 </div>
             </form>
         </div>
