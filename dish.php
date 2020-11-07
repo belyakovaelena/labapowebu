@@ -54,9 +54,9 @@ session_start();
     </nav>
 </header>
 
-        <div class="form">
+        <div class="form" >
             <h1>ДОБАВИТЬ БЛЮДО</h1>
-            <form action="add_dish.php" method="post">
+            <form action="add_dish.php" method="post" id="dish_form">
                 <div class="input-form">
                     <input type="text" name="dish" id="name" placeholder="Введите название блюда">
                 </div>
@@ -73,7 +73,7 @@ session_start();
                     <input type="text" name="time" id="time" placeholder="Время приготовления(часы:минуты:секунды)">
                 </div>
                 <div class="input-form">
-                    <input type="submit" value="ДОБАВИТЬ">
+                    <input type="submit"  id="submit" value="ДОБАВИТЬ">
                 </div>
                 <div class="input-form">
                     <a class="button" href="output_table.php">ПОСМОТРЕТЬ ТАБЛИЦУ</a>
@@ -83,7 +83,7 @@ session_start();
         </div>
 
 <main>
-
+    <script src="dish.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <!— Bootstrap tooltips —>
     <script type="text/javascript" src="js/popper.min.js"></script>

@@ -98,5 +98,6 @@ h1{
     font-size: 30px;
     text-transform: uppercase;
 }
-
-
+.input-form_incorrect{
+    border: 2px solid #d01325 !important;
+}
