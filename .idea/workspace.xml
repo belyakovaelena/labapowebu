@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd4ac6c8-ff4f-4664-97c5-1e629382c998" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dish.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style_dish.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style_dish.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dish.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dish.php" beforeDir="false" afterPath="$PROJECT_DIR$/dish.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,6 +90,7 @@
       <workItem from="1604426968136" duration="9967000" />
       <workItem from="1604655208830" duration="5491000" />
       <workItem from="1604664949289" duration="23951000" />
+      <workItem from="1604776990661" duration="662000" />
     </task>
     <servers />
   </component>

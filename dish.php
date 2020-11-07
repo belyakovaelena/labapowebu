@@ -61,10 +61,10 @@ session_start();
                     <input type="text" name="dish" id="name" placeholder="Введите название блюда">
                 </div>
                 <div class="input-form">
-                    <input type="text" name="price" id="price" placeholder="Введите цену блюда">
+                    <input type="text" name="price" id="price" placeholder="Введите цену блюда(в руб.)">
                 </div>
                 <div class="input-form">
-                    <input type="text" name="weight" id="weight" placeholder="Введите вес блюда">
+                    <input type="text" name="weight" id="weight" placeholder="Введите вес блюда(в граммах)">
                 </div>
                 <div class="input-form">
                     <input type="text" name="calories" id="calories" placeholder="Количество калорий">
@@ -83,7 +83,7 @@ session_start();
         </div>
 
 <main>
-    <script src="dish.js"></script>
+    <script src="js/dish.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <!— Bootstrap tooltips —>
     <script type="text/javascript" src="js/popper.min.js"></script>
