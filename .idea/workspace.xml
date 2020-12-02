@@ -20,16 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd4ac6c8-ff4f-4664-97c5-1e629382c998" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/connect.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/connect.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/add_dish.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_dish.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization.php" beforeDir="false" afterPath="$PROJECT_DIR$/authorization.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style_dish.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style_dish.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dish.php" beforeDir="false" afterPath="$PROJECT_DIR$/dish.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu_3.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu_3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/output_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/connect.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +97,7 @@
       <workItem from="1605875098426" duration="1344000" />
       <workItem from="1605978186161" duration="948000" />
       <workItem from="1606827913048" duration="11234000" />
+      <workItem from="1606906692341" duration="1145000" />
     </task>
     <servers />
   </component>
