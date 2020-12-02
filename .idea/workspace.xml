@@ -20,9 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd4ac6c8-ff4f-4664-97c5-1e629382c998" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/connect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/connect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dish.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/add_dish.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_dish.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization.php" beforeDir="false" afterPath="$PROJECT_DIR$/authorization.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style_dish.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style_dish.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dish.php" beforeDir="false" afterPath="$PROJECT_DIR$/dish.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_3.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu_3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/output_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +42,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpTemplates">
-    <option name="NEW_PHP_FILE_LAST_EXTENSION" value="hphp" />
-  </component>
   <component name="ProjectId" id="1iQUEhbEO1DXmilOl4rmNAE7Ny2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -48,16 +52,18 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\program1\OpenServer\domains\labapowebu\css" />
-      <recent name="C:\program1\OpenServer\domains\htdocs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\program1\OpenServer\domains\labapowebu\html" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\program1\OpenServer\domains\labapowebu\test" />
+      <recent name="C:\program1\OpenServer\domains\labapowebu\css" />
+      <recent name="C:\program1\OpenServer\domains\htdocs" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -90,7 +96,13 @@
       <workItem from="1604426968136" duration="9967000" />
       <workItem from="1604655208830" duration="5491000" />
       <workItem from="1604664949289" duration="23951000" />
-      <workItem from="1604776990661" duration="662000" />
+      <workItem from="1604776990661" duration="1419000" />
+      <workItem from="1605082260295" duration="452000" />
+      <workItem from="1605086036962" duration="588000" />
+      <workItem from="1605546919995" duration="5516000" />
+      <workItem from="1605875098426" duration="1344000" />
+      <workItem from="1605978186161" duration="948000" />
+      <workItem from="1606827913048" duration="11234000" />
     </task>
     <servers />
   </component>
@@ -114,14 +126,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602253053271" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605978245045">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605978245045" />
     <state width="189" height="539" key="HiddenNamespacesPopup" timestamp="1602252874604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="189" height="539" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1602252874604" />
-    <state x="604" y="332" key="NewPhpFileDialog" timestamp="1604662309979">
+    <state x="604" y="332" key="NewPhpFileDialog" timestamp="1605559154638">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1604662309979" />
+    <state x="604" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1605559154638" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1605560576432">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605560576432" />
     <state x="425" y="202" key="run.anything.popup" timestamp="1601926000685">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

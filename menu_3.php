@@ -274,7 +274,7 @@ session_start();
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="#" class="dark-grey-text">Глинтвейн с корицей и апельсином
+                                    <a href="#" class="dark-grey-text">Глинтвейн с корицей и апельсином-
 
                                     </a>
                                 </strong>

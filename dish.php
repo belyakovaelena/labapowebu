@@ -72,16 +72,15 @@ session_start();
                 <div class="input-form">
                     <input type="text" name="time" id="time" placeholder="Время приготовления(часы:минуты:секунды)">
                 </div>
+
                 <div class="input-form">
                     <input type="submit"  id="submit" value="ДОБАВИТЬ">
                 </div>
-                <div class="input-form">
-                    <a class="button" href="output_table.php">ПОСМОТРЕТЬ ТАБЛИЦУ</a>
-
-                </div>
             </form>
         </div>
-
+<div class="table" >
+    <a class="button" href="output_table.php">ПОСМОТРЕТЬ ТАБЛИЦУ</a>
+</div>
 <main>
     <script src="js/dish.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>

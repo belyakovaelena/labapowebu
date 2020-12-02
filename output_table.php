@@ -7,7 +7,6 @@ $sql = "SELECT * FROM `dish`";
 $result = $mysql -> query($sql);
 $result=$result -> fetch_all();
 
-//print_r($result);
 
 echo" 
 
@@ -19,6 +18,7 @@ echo"
       <th scope='col'>ВЕС</th>
       <th scope='col''>КАЛОРИИ</th>
       <th scope='col''>ВРЕМЯ ГОТОВКИ</th>
+      <th scope='col''>ПОЛЬЗОВАТЕЛЬ</th>
     </tr>
   </thead>
   <tbody>
@@ -32,6 +32,7 @@ echo"
       <td>$item[3]</td>
       <td>$item[4]</td>
       <td>$item[5]</td>
+      <td>$item[6]</td>
     </tr>
     ";
     }

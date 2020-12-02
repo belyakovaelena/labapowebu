@@ -18,9 +18,10 @@ if (!$check_if) {
     <link rel="stylesheet" href="css/mdb.min.css">
     </br><a class="btn btn-secondary" href="register.php">Вернуться назад</a>
     <?php
-    exit();
+    //exit();
 }
 $_SESSION["user"] = $user['name'];
+$_SESSION["login"] = $user['login'];
 $mysql->close();
 header('Location: ../register.php');
 ?>
