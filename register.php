@@ -96,7 +96,6 @@ if($_SESSION['user'] == ''):
       </div>
                 <div class="col">
                     <div class="form">
-
                         <h1>ДЛЯ АВТОРИЗАЦИИ</h1>
                         <form action="authorization.php" method="post">
 
@@ -134,15 +133,33 @@ if($_SESSION['user'] == ''):
                             </div>
                         </div>
                     </div>
-                    <div class="container mt-5 mb-4 text-center text-md-left">
-                        <div class="row mt-3">
-                            <div class="col-md-2 col-lg-7 col-xl-8 mb-4">
+
+                    <section id="examples" class="text-center">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 mb-4">
+                                <div class="container mt-5 mb-4 text-center text-md-left">
                                 <h3>Информация о пользователе</h3><br>
                                 <p>Имя: <?= $_SESSION['user'] ?></p><br>
                                 <p>login: <?=$login?></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <img src="img/img_328560.png" class="card-img-top" alt="user_photo">
+                                    <div class="card-body">
+                                        <p class="card-text">тут может быть ваша фотография</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <br><a class='btn btn-outline-primary' href='delete_lk.php'  >удалить аккаунт</a>
+                                <br><a class='btn btn-outline-primary' href='output_table.php'  >посмотреть таблицу блюд</a>
+                                <br><a class='btn btn-outline-primary' href='outputusers_table.php'  >посмотреть таблицу зарегистрированных пользователей</a>
+
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </footer>
                 <?php
                 $mysql->close();

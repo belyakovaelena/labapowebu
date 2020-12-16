@@ -19,12 +19,12 @@ session_start();
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="css/mdb.min.css">
     <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="css/style_dish.css">
+    <link rel="stylesheet" href="css/style_profile.css">
 </head>
 <body>
-<header id="menu">
+<header>
     <div class="text-center mb-4">
-
+        <h1 align="center" class="text-uppercase font-weight-bold" >приветики-пистолетики</h1>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
         <div class="container">
@@ -42,7 +42,10 @@ session_start();
                     <li class="nav-item">
                         <a href="delivery.php" class="nav-link waves-effect waves-light">ДОСТАВКА</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a href="dish.php" class="nav-link">ДОБАВИТЬ БЛЮДО
+                        </a>
+                    </li>
                     <?php
                     if(empty($_SESSION['user'])){
                         ?>
@@ -63,53 +66,50 @@ session_start();
                 <?php
                 endif;
                 ?>
-                </ul>
-
             </div>
         </div>
     </nav>
 </header>
+<?php
+if($_SESSION['user'] == ''):
+?>
 
-        <div class="form" >
-            <h1>ДОБАВИТЬ БЛЮДО</h1>
-            <form action="add_dish.php" method="post" id="dish_form" enctype="multipart/form-data">
-                <div class="input-form">
-                    <input type="text" name="dish" id="name" placeholder="Введите название блюда">
-                </div>
-                <div class="input-form">
-                    <input type="text" name="price" id="price" placeholder="Введите цену блюда(в руб.)">
-                </div>
-                <div class="input-form">
-                    <input type="text" name="weight" id="weight" placeholder="Введите вес блюда(в граммах)">
-                </div>
-                <div class="input-form">
-                    <input type="text" name="calories" id="calories" placeholder="Количество калорий">
-                </div>
-                <div class="input-form">
-                    <input type="text" name="time" id="time" placeholder="Время приготовления(часы:минуты:секунды)">
-                </div>
-
-                <div class="example-1">
-                    <div class="form-group">
-                        <label class="label">
-
-                            <span class="title">Добавить файл</span>
-                            <input type="file" name="file">
-                        </label>
+<main>
+    <?php else: ?>
+        <?php
+        $mysql = new mysqli('localhost','root','root','register-bd');
+        $login = $_POST['login'];
+        $result= $mysql->query("SELECT `name` FROM `users` WHERE `login` = '$login'");
+        $arr=$result->fetch_assoc();
+        $name=$arr['name'];
+        ?>
+        <footer class="page-footer font-small pt-0">
+            <div class="primary-color">
+                <div class="container">
+                    <div class="row py-4  align-items-center">
+                        <div class="col-md-12 col-lg-12 text-center text-md-left ">
+                            <h1>Это профиль пользователя, на чье блюдо вы нажали</h1><br>
+                            <h2>Если хотите узнать как связаться с этим человеком, то позвоните на номер: 88005553535</h2>
+                        </div>
                     </div>
                 </div>
-
-
-                <div class="input-form">
-                    <input type="submit"  id="submit" value="ДОБАВИТЬ">
+            </div>
+            <div class="container mt-5 mb-4 text-center text-md-left">
+                <div class="row mt-3">
+                    <div class="col-md-2 col-lg-7 col-xl-8 mb-4">
+                        <h3>Информация о пользователе</h3><br>
+                        <p>Имя: <?= $name ?></p><br>
+                        <p>login: <?=$login?></p>
+                        <br><a class='btn btn-outline-primary' href='output_table.php'  >посмотреть таблицу блюд</a>
+                        <a class='btn btn-outline-primary' href='outputusers_table.php'  >посмотреть таблицу пользователей</a>
+                    </div>
                 </div>
-            </form>
-        </div>
-<div class="table" >
-    <a class="button" href="output_table.php">ПОСМОТРЕТЬ ТАБЛИЦУ</a>
-</div>
-<main>
-    <script src="js/dish.js"></script>
+            </div>
+        </footer>
+        <?php
+        $mysql->close();
+        ?>
+    <?php endif; ?>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <!— Bootstrap tooltips —>
     <script type="text/javascript" src="js/popper.min.js"></script>

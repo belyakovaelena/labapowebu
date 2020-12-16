@@ -11,7 +11,8 @@ $check_if = mysqli_num_rows($result);
 $user = $result->fetch_assoc();
 
 if (!$check_if) {
-    echo "Неверный логин или пароль";
+    echo "Неверный логин или пароль или такого пользователя нет
+    ";
     ?>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Material Design Bootstrap -->

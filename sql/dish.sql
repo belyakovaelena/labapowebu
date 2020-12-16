@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 06 2020 г., 21:54
+-- Время создания: Дек 16 2020 г., 10:36
 -- Версия сервера: 5.7.29
 -- Версия PHP: 7.4.5
 
@@ -33,17 +33,18 @@ CREATE TABLE `dish` (
   `price` int(110) NOT NULL,
   `weight` int(255) NOT NULL,
   `calories` int(11) NOT NULL,
-  `time` time NOT NULL
+  `time` time NOT NULL,
+  `user` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `img` varchar(50) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `dish`
 --
 
-INSERT INTO `dish` (`id`, `dish`, `price`, `weight`, `calories`, `time`) VALUES
-(1, 'суп', 45, 125, 556, '06:30:00'),
-(2, 'салат', 56, 700, 500, '00:15:00'),
-(3, 'Стейк', 400, 900, 2340, '00:56:00');
+INSERT INTO `dish` (`id`, `dish`, `price`, `weight`, `calories`, `time`, `user`, `img`) VALUES
+(34, 'Крабовый', 56, 120, 567, '00:17:00', 'lenochka2117', 'fe3e41bd-3fcc-424c-9819-360bafc5cbc2'),
+(36, 'глинтвейн', 89, 230, 450, '00:56:00', 'stepan1312', '86928037-9677-40f1-b08e-22ed4e552483');
 
 --
 -- Индексы сохранённых таблиц
@@ -53,7 +54,8 @@ INSERT INTO `dish` (`id`, `dish`, `price`, `weight`, `calories`, `time`) VALUES
 -- Индексы таблицы `dish`
 --
 ALTER TABLE `dish`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `deletedish` (`user`);
 
 --
 -- AUTO_INCREMENT для сохранённых таблиц
@@ -63,7 +65,17 @@ ALTER TABLE `dish`
 -- AUTO_INCREMENT для таблицы `dish`
 --
 ALTER TABLE `dish`
-  MODIFY `id` int(100) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(100) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- Ограничения внешнего ключа сохраненных таблиц
+--
+
+--
+-- Ограничения внешнего ключа таблицы `dish`
+--
+ALTER TABLE `dish`
+  ADD CONSTRAINT `deletedish` FOREIGN KEY (`user`) REFERENCES `users` (`login`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

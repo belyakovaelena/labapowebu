@@ -36,7 +36,7 @@
                 </ul>
                 <ul class="navbar-nav nav-flex-icons">
                     <li class="nav-item">
-                        <a href="#" class="nav-link waves-effect">
+                        <a href="korzina.php" class="nav-link waves-effect">
                             <span class="bage red z-depth-1 mr-1">12</span>
                             <i class="fa fa-shopping-cart"></i>
                             <span class="clearfix d-none d-sm-inline-block">Корзина</span>
