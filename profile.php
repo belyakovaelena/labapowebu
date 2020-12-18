@@ -78,10 +78,12 @@ if($_SESSION['user'] == ''):
     <?php else: ?>
         <?php
         $mysql = new mysqli('localhost','root','root','register-bd');
-        $login = $_POST['login'];
-        $result= $mysql->query("SELECT `name` FROM `users` WHERE `login` = '$login'");
+       // $login = $_POST['login'];
+        $id = mysqli_real_escape_string($mysql, trim($_POST['id']));
+        $result= $mysql->query("SELECT * FROM `users` WHERE `id` = '$id'");
         $arr=$result->fetch_assoc();
         $name=$arr['name'];
+        $login = $arr['login'];
         ?>
         <footer class="page-footer font-small pt-0">
             <div class="primary-color">

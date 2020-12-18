@@ -10,6 +10,7 @@ else{
     $weight = mysqli_real_escape_string($mysql, trim($_POST['weight']));
     $calories = mysqli_real_escape_string($mysql, trim($_POST['calories']));
     $time = mysqli_real_escape_string($mysql, trim($_POST['time']));
+    $user_id = mysqli_real_escape_string($mysql, trim($_SESSION['id']));
     $user = $_SESSION['login'];
 
 
@@ -26,7 +27,8 @@ else{
     }
 
 
-    $mysql->query("INSERT INTO `dish` (`dish`, `price`, `weight`, `calories`, `time`,`user`,`img`)VALUES('$dish', '$price', '$weight', '$calories', '$time', '$user','$uuid')");
+    $mysql->query("INSERT INTO `dish` (`dish`, `price`, `weight`, `calories`, `time`,`user`,`user_id`,`img`)
+    VALUES('$dish', '$price', '$weight', '$calories', '$time', '$user','$user_id','$uuid')");
 
     header('Location: ../dish.php');
 }

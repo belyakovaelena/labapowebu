@@ -30,7 +30,7 @@ $result=$result -> fetch_all();
   <?php
     foreach($result as $item){
     $path="http://labapowebu/downloads/";
-    $img_path = $path . $item[7] . ".jpg";
+    $img_path = $path . $item[8] . ".jpg";
     echo "
     
     <tr>
@@ -43,7 +43,7 @@ $result=$result -> fetch_all();
       <td>$item[4]</td>
       <td>$item[5]</td>
       <td>$item[6] <br><form action='profile.php' method='post' id='edit_form'>
-        <input type='hidden' value='$item[6]' name='login' id='login'>
+        <input type='hidden' value='$item[7]' name='id' id='id'>
         
       <button class='btn btn-outline-primary' type='submit'>посмотреть инфу о пользователе</button>
       

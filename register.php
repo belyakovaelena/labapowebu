@@ -118,9 +118,10 @@ if($_SESSION['user'] == ''):
                 <?php
                 $mysql = new mysqli('localhost','root','root','register-bd');
                 $name = $_SESSION['user'];
-                $result= $mysql->query("SELECT `login` FROM `users` WHERE `name` = '$name'");
+                $result= $mysql->query("SELECT * FROM `users` WHERE `name` = '$name'");
                 $arr=$result->fetch_assoc();
                 $login=$arr['login'];
+                $_SESSION['id']=$arr['id'];
                 ?>
                 <footer class="page-footer font-small unique-color-dark pt-0">
                     <div class="primary-color">

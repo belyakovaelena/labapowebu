@@ -20,7 +20,7 @@ $pass = md5($pass."ktyf0301");
 $mysql = new mysqli('localhost', 'root', 'root', 'register-bd');
 $mysql->query("INSERT INTO `users` (`login`, `pass`, `name`) VALUES('$login', '$pass', '$name')");
 $mysql->close();
-
+$_SESSION['user']='';
 header('Location: ../register.php');
 ?>
 ?>

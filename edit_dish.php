@@ -11,7 +11,8 @@ else{
     $calories = mysqli_real_escape_string($mysql, trim($_POST['calories']));
     $time = mysqli_real_escape_string($mysql, trim($_POST['time']));
     $user = $_SESSION['login'];
-
+    $user_id = mysqli_real_escape_string($mysql, trim($_SESSION['id']));
+    $uuid = mysqli_real_escape_string($mysql, trim($_POST['img_path']));
     // если была произведена отправка формы
     if (isset($_FILES['file'])) {
         // проверяем, можно ли загружать изображение
@@ -24,7 +25,8 @@ else{
         }
     }
 
-    $mysql->query("UPDATE dish SET dish='$dish' , price='$price', weight='$weight', calories='$calories', time='$time', user='$user', img='$uuid' WHERE id ='$id'");
+    $mysql->query("UPDATE dish SET dish='$dish' , price='$price', weight='$weight', calories='$calories', time='$time', user='$user',
+    user_id='$user_id',img='$uuid' WHERE id ='$id'");
 
     header('Location: ../dish_edit_view.php');
 }

@@ -20,23 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd4ac6c8-ff4f-4664-97c5-1e629382c998" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/delete_dish.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delete_lk.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dish_edit_view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/edit_dish.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/edit_dish.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/korzina.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/outputusers_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delete_user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edit_user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_edit_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/add_dish.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_dish.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization.php" beforeDir="false" afterPath="$PROJECT_DIR$/authorization.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style_dish.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style_dish.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dish.php" beforeDir="false" afterPath="$PROJECT_DIR$/dish.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header_for_delivery_and_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/header_for_delivery_and_menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/check.php" beforeDir="false" afterPath="$PROJECT_DIR$/check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delete_dish.php" beforeDir="false" afterPath="$PROJECT_DIR$/delete_dish.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dish_edit_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/dish_edit_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit_dish.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit_dish.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/output_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputusers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/outputusers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,6 +118,8 @@
       <workItem from="1607437003667" duration="17149000" />
       <workItem from="1607496225584" duration="8060000" />
       <workItem from="1607790184954" duration="11648000" />
+      <workItem from="1608104106372" duration="10693000" />
+      <workItem from="1608232225230" duration="3416000" />
     </task>
     <servers />
   </component>

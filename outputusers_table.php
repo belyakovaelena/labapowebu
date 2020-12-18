@@ -6,7 +6,6 @@ $sql = "SELECT * FROM `users`";
 $result = $mysql -> query($sql);
 $result=$result -> fetch_all();
 
-
 ?>
 
 <table class='table table-hover'>
@@ -15,30 +14,22 @@ $result=$result -> fetch_all();
     <thead class='thead-dark'>
     <tr>
         <th scope='col'>ЛОГИН</th>
-
-
         <th scope='col'>ИМЯ</th>
-
-
-
         <th scope='col''></th>
+
     </tr>
     </thead>
     <tbody>
     <?php
     foreach($result as $item){
-        $path="http://labapowebu/downloads/";
-        $img_path = $path . $item[7] . ".jpg";
+
         echo "
     
     <tr>
       <td>$item[1] </td> 
-    
-      
-      
       
       <td>$item[3] <form action='profile.php' method='post' id='edit_form'>
-        <input type='hidden' value='$item[1]' name='login' id='login'>
+        <input type='hidden' value='$item[0]' name='id' id='id'>
         
       <button class='btn btn-outline-primary' type='submit'>посмотреть инфу о пользователе</button>
       
@@ -46,10 +37,24 @@ $result=$result -> fetch_all();
       
       
       
-      <td> 
+     
+        <td> 
+        <form action='user_edit_view.php' method='post' id='edit_form'>
+        <input type='hidden' value='$item[0]' name='id' id='id'>
         
-  
+      <button class='btn btn-outline-primary' type='submit'>редактировать</button>
+      
+      </form>
+     
+     <form action='delete_user.php' method='post' id='edit_form' >
+        <input type='hidden' value='$item[0]' name='id' id='id'>
+        
+      <button class='btn btn-outline-primary' type='submit'>удалить</button>
+      </form> 
+      
       </td>
+  
+      
     </tr>
    
    ";

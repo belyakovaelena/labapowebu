@@ -1,11 +1,11 @@
 <?php
 require_once "connect.php";
 $id = mysqli_real_escape_string($mysql, trim($_POST['id']));
-$sql = "SELECT * FROM `dish` WHERE `id`='$id'";
+
+$sql = "SELECT * FROM `users` WHERE `id`='$id'";
 $result = $mysql -> query($sql);
 $result=$result -> fetch_all();
 $result=$result[0];
-
 
 ?>
 <!DOCTYPE html>
@@ -74,51 +74,32 @@ $result=$result[0];
                 <?php
                 endif;
                 ?>
-
-
             </div>
         </div>
     </nav>
 </header>
 
 <div class="form" >
-    <h1>РЕДАКТИРОВАТЬ БЛЮДО</h1>
-    <form action="edit_dish.php" method="post" id="dish_form" enctype="multipart/form-data">
-        <div class="input-form">
-            <input value="<?php echo $result[0]; ?>" name="id" type="hidden" id="id">
-            <input value="<?php echo $result[8]; ?>" name="img_path" type="hidden" id="img_path">
-            <input value="<?php echo $result[1]; ?>" type="text" name="dish" id="name" placeholder="Введите название блюда">
-        </div>
-        <div class="input-form">
-            <input value="<?php echo $result[2]; ?>" type="text" name="price" id="price" placeholder="Введите цену блюда(в руб.)">
-        </div>
-        <div class="input-form">
-            <input value="<?php echo $result[3]; ?>" type="text" name="weight" id="weight" placeholder="Введите вес блюда(в граммах)">
-        </div>
-        <div class="input-form">
-            <input value="<?php echo $result[4]; ?>"  type="text" name="calories" id="calories" placeholder="Количество калорий">
-        </div>
-        <div class="input-form">
-            <input value="<?php echo $result[5]; ?>" type="text" name="time" id="time" placeholder="Время приготовления(часы:минуты:секунды)">
-        </div>
-        <div class="example-1">
-            <div class="form-group">
-                <label class="label">
-
-                    <span class="title">Добавить файл</span>
-                    <input type="file" name="file">
-                </label>
-            </div>
-        </div>
+    <h1>РЕДАКТИРОВАТЬ ИНФУ О ПОЛЬЗОВАТЕЛЕ</h1>
+    <form action="edit_user.php" method="post" id="user_form" >
+                <div class="input-form">
+                    <input value="<?php echo $result[0]; ?>" name="id" type="hidden" id="id">
+                    <input value="<?php echo $result[3]; ?> " type="text" name="name" id="name" placeholder="Введите имя">
+                </div>
+                <div class="input-form">
+                    <input value="<?php echo $result[1]; ?> " type="text" name="login" id="login" placeholder="ЛОГИН">
+                </div>
 
         <div class="input-form">
             <input type="submit" id="submit" value="ИЗМЕНИТЬ">
         </div>
+
     </form>
 </div>
 <div class="table" >
-    <a class="button" href="output_table.php">ПОСМОТРЕТЬ ТАБЛИЦУ</a>
+    <a class="button" href="outputusers_table.php">ПОСМОТРЕТЬ ТАБЛИЦУ</a>
 </div>
+
 <main>
     <script src="js/edit_dish.js"></script>-->
     <script type="text/javascript" src="js/jquery.min.js"></script>
