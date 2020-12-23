@@ -22,6 +22,7 @@ if (!$check_if) {
     //exit();
 }
 $_SESSION["user"] = $user['name'];
+$_SESSION["id"] = $user['id'];
 $_SESSION["login"] = $user['login'];
 $mysql->close();
 header('Location: ../register.php');

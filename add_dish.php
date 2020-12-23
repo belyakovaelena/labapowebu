@@ -27,7 +27,7 @@ else{
     }
 
 
-    $mysql->query("INSERT INTO `dish` (`dish`, `price`, `weight`, `calories`, `time`,`user`,`user_id`,`img`)
+    $mysql->query("INSERT INTO `dishes` (`dish`, `price`, `weight`, `calories`, `time`,`user`,`user_id`,`img`)
     VALUES('$dish', '$price', '$weight', '$calories', '$time', '$user','$user_id','$uuid')");
 
     header('Location: ../dish.php');

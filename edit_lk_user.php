@@ -1,9 +1,14 @@
 <?php
-session_start();
+require_once "connect.php";
+$id = mysqli_real_escape_string($mysql, trim($_POST['id']));
+
+$sql = "SELECT * FROM `users` WHERE `id`='$id'";
+$result = $mysql -> query($sql);
+$result=$result -> fetch_all();
+$result=$result[0];
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -64,51 +69,36 @@ session_start();
                 <?php
                 endif;
                 ?>
-                </ul>
-
+               </ul>
             </div>
         </div>
     </nav>
 </header>
 
-        <div class="form" >
-            <h1>ДОБАВИТЬ БЛЮДО</h1>
-            <form action="add_dish.php" method="post" id="dish_form" enctype="multipart/form-data">
-                <div class="input-form">
-                    <input type="text" name="dish" id="name" placeholder="Введите название блюда">
-                </div>
-                <div class="input-form">
-                    <input type="text" name="price" id="price" placeholder="Введите цену блюда(в руб.)">
-                </div>
-                <div class="input-form">
-                    <input type="text" name="weight" id="weight" placeholder="Введите вес блюда(в граммах)">
-                </div>
-                <div class="input-form">
-                    <input type="text" name="calories" id="calories" placeholder="Количество калорий">
-                </div>
-                <div class="input-form">
-                    <input type="text" name="time" id="time" placeholder="Время приготовления(часы:минуты:секунды)">
-                </div>
-
-                <div class="example-1">
-                    <div class="form-group">
-                        <label class="label">
-
-                            <span class="title">Добавить файл</span>
-                            <input type="file" name="file">
-                        </label>
-                    </div>
-                </div>
-
-                <div class="input-form">
-                    <input type="submit"  id="submit" value="ДОБАВИТЬ">
-                </div>
-            </form>
+<div class="form" >
+    <h1>РЕДАКТИРОВАТЬ ИНФУ О ПОЛЬЗОВАТЕЛЕ</h1>
+    <form action="edit_lk.php" method="post" id="user_form" >
+        <div class="input-form">
+            <input value="<?php echo $result[0]; ?>" name="id" type="hidden" id="id">
+            <input value="<?php echo $result[3]; ?> " type="text" name="name" id="name" placeholder="Введите имя">
         </div>
+        <div class="input-form">
+            <input value="<?php echo $result[1]; ?> " type="text" name="login" id="login" placeholder="ЛОГИН">
+        </div>
+
+        <div class="input-form">
+            <input type="submit" id="submit" value="ИЗМЕНИТЬ">
+        </div>
+
+    </form>
+</div>
+
 <div class="table" >
-    <a class="button" href="output_table.php">ПОСМОТРЕТЬ ТАБЛИЦУ</a>
+    <a class="button" href="register.php">ПОСМОТРЕТЬ изменения</a>
 </div>
 <main>
+    <script type="text/javascript" src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/spellcheker.js"></script>
     <script type="text/javascript" src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/dish.js"></script>
     <script src="js/spellcheker.js"></script>

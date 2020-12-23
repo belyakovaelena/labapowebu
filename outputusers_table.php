@@ -7,7 +7,12 @@ $result = $mysql -> query($sql);
 $result=$result -> fetch_all();
 
 ?>
-
+<form class="form" action="search_users.php" method="POST">
+    <div class="search-box">
+        <input type="search" class="search-txt" placeholder="Поиск" name="search">
+        <input type="submit">
+    </div>
+</form>
 <table class='table table-hover'>
 
     <input type='hidden' value="<?php $result[0]?>" id="id">
@@ -25,7 +30,7 @@ $result=$result -> fetch_all();
 
         echo "
     
-    <tr>
+    <tr id='$item[0]'>
       <td>$item[1] </td> 
       
       <td>$item[3] <form action='profile.php' method='post' id='edit_form'>

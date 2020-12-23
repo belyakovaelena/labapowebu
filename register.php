@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+require_once "connect.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,7 +85,7 @@ if($_SESSION['user'] == ''):
                     <input type="text" name="name" id="name" placeholder="Введите имя">
                 </div>
                 <div class="input-form">
-                    <input type="text" name="login" id="login" placeholder="ЛОГИН">
+                    <input type="text" name="login" id="login" placeholder="ЛОГИН(почта ваша)">
                 </div>
                 <div class="input-form">
                     <input type="password" name="pass" id="pass" placeholder="ПАРОЛЬ">
@@ -98,9 +101,8 @@ if($_SESSION['user'] == ''):
                     <div class="form">
                         <h1>ДЛЯ АВТОРИЗАЦИИ</h1>
                         <form action="authorization.php" method="post">
-
                             <div class="input-form">
-                                <input type="text" name="login" id="login" placeholder="ЛОГИН">
+                                <input type="text" name="login" id="login" placeholder="ЛОГИН(почта ваша)">
                             </div>
                             <div class="input-form">
                                 <input type="password" name="pass" id="pass" placeholder="ПАРОЛЬ">
@@ -117,11 +119,12 @@ if($_SESSION['user'] == ''):
             <?php else: ?>
                 <?php
                 $mysql = new mysqli('localhost','root','root','register-bd');
-                $name = $_SESSION['user'];
-                $result= $mysql->query("SELECT * FROM `users` WHERE `name` = '$name'");
+                $id = $_SESSION['id'];
+                $result= $mysql->query("SELECT * FROM `users` WHERE `id` = '$id'");
                 $arr=$result->fetch_assoc();
                 $login=$arr['login'];
-                $_SESSION['id']=$arr['id'];
+                $name=$arr['name'];
+                //$_SESSION['id']=$arr['id'];
                 ?>
                 <footer class="page-footer font-small unique-color-dark pt-0">
                     <div class="primary-color">
@@ -140,8 +143,13 @@ if($_SESSION['user'] == ''):
                             <div class="col-lg-4 col-md-12 mb-4">
                                 <div class="container mt-5 mb-4 text-center text-md-left">
                                 <h3>Информация о пользователе</h3><br>
-                                <p>Имя: <?= $_SESSION['user'] ?></p><br>
+                                <p>Имя: <?= $name ?></p><br>
                                 <p>login: <?=$login?></p>
+                                   <form action='edit_lk_user.php' method='post' id='edit_form'>
+                                        <input type='hidden' value='<?=$arr['id']?>' name='id' id='id'>
+                                        <button class='btn btn-outline-primary' type='submit'>редактировать информацию о пользователе</button>
+                                    </form>
+
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 mb-4">
@@ -166,6 +174,7 @@ if($_SESSION['user'] == ''):
                 $mysql->close();
                 ?>
             <?php endif; ?>
+            <script src="js/user_register.js"></script>
             <script type="text/javascript" src="js/jquery.min.js"></script>
             <!— Bootstrap tooltips —>
             <script type="text/javascript" src="js/popper.min.js"></script>

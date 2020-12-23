@@ -15,12 +15,23 @@ if(mb_strlen($login) < 5 || mb_strlen($login) > 50) {
 
     exit();
 }
-$pass = md5($pass."ktyf0301");
-
 $mysql = new mysqli('localhost', 'root', 'root', 'register-bd');
-$mysql->query("INSERT INTO `users` (`login`, `pass`, `name`) VALUES('$login', '$pass', '$name')");
-$mysql->close();
-$_SESSION['user']='';
-header('Location: ../register.php');
-?>
-?>
+$query = "SELECT * FROM `users` WHERE login = '$login'";
+
+$data = mysqli_query($mysql, $query);
+
+if(mysqli_num_rows($data) == 0) {
+//регистрируешь
+    $pass = md5($pass."ktyf0301");
+
+    $mysql->query("INSERT INTO `users` (`login`, `pass`, `name`) VALUES('$login', '$pass', '$name')");
+    $mysql->close();
+    $_SESSION['user']='';
+    header('Location: ../register.php');
+}else {
+//занят
+    echo "Логин занят";
+}
+
+
+

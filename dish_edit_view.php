@@ -1,7 +1,7 @@
 <?php
 require_once "connect.php";
 $id = mysqli_real_escape_string($mysql, trim($_POST['id']));
-$sql = "SELECT * FROM `dish` WHERE `id`='$id'";
+$sql = "SELECT * FROM `dishes` WHERE `id`='$id'";
 $result = $mysql -> query($sql);
 $result=$result -> fetch_all();
 $result=$result[0];

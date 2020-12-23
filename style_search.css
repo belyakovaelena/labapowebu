@@ -1,0 +1,54 @@
+html,body,header, #intro{
+    height: 100%;
+}
+#intro{
+    background: url(../img/mramor34.jpg) no-repeat center center fixed;
+
+}
+.top-nav-collapse{
+    background-color: #24355C;
+}
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse){
+        background: #24355C;
+    }
+}
+.search-box {
+    display: flex;
+
+    background-color: #2f3640;
+    height:70px;
+    width: 500px;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+*{outline: none!important;}
+.search-btn {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2f3640;
+    text-decoration: none;
+    border: none;
+}
+
+.search-txt {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 2px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+
+}
+
+.search-box:hover .search-btn {
+    background-color: #2b2b2b;
+    padding:7px;
+}

@@ -1,14 +1,20 @@
 
 <?php
 echo"<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css' integrity='sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2' crossorigin='anonymous'>";
-
+//echo"<link rel='stylesheet' href='css/style_search.css'>";
 $mysql = new mysqli('localhost', 'root', 'root', 'register-bd');
-$sql = "SELECT * FROM `dish`";
+$sql = "SELECT * FROM `dishes`";
 $result = $mysql -> query($sql);
 $result=$result -> fetch_all();
 
 
 ?>
+<form class="form" action="search_dish.php" method="POST">
+    <div class="search-box">
+        <input type="search" class="search-txt" placeholder="Поиск" name="search">
+        <input type="submit">
+    </div>
+</form>
 
 <table class='table table-hover'>
 
@@ -33,7 +39,7 @@ $result=$result -> fetch_all();
     $img_path = $path . $item[8] . ".jpg";
     echo "
     
-    <tr>
+    <tr id='$item[0]'>
       <td>$item[1] </td> 
       <td><img src='$img_path' width='90' height='80'></td>
       
@@ -51,11 +57,8 @@ $result=$result -> fetch_all();
       <td> 
         <form action='dish_edit_view.php' method='post' id='edit_form'>
         <input type='hidden' value='$item[0]' name='id' id='id'>
-        
       <button class='btn btn-outline-primary' type='submit'>редактировать</button>
-      
       </form>
-     
      <form action='delete_dish.php' method='post' id='edit_form' >
         <input type='hidden' value='$item[0]' name='id' id='id'>
         

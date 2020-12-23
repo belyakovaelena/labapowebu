@@ -48,11 +48,7 @@ session_start();
                     </li>
 
                 </ul>
-<!--                <form class="form-inline">-->
-<!--                    <div class="md-form my-0">-->
-<!--                        <input type="text" class="form-control mr-sm-2" placeholder="найти блюдо" aria-label="Search">-->
-<!--                    </div>-->
-<!--                </form>-->
+
             </div>
         </nav>
 

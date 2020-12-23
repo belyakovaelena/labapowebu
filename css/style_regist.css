@@ -85,4 +85,6 @@ color: #ffffff;
 	margin-top: 0;
 	color: #44fdbd;
 }
-
+.input-form_incorrect{
+	border: 2px solid #d01325 !important;
+}
