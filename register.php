@@ -124,7 +124,7 @@ if($_SESSION['user'] == ''):
                 $arr=$result->fetch_assoc();
                 $login=$arr['login'];
                 $name=$arr['name'];
-                //$_SESSION['id']=$arr['id'];
+
                 ?>
                 <footer class="page-footer font-small unique-color-dark pt-0">
                     <div class="primary-color">

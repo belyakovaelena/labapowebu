@@ -9,7 +9,7 @@ function clear_query($query)
 }
 
 
-$search_query = clear_query($_POST['search']);
+$search_query=trim(strip_tags(stripcslashes(htmlspecialchars($_POST["search"]))));
 if(strlen($search_query)>0){
 
     $results = [];

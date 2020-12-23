@@ -76,7 +76,6 @@ window.onload = () => {
 
         const firstregular = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/
 
-
         let password = value;
 
         if( firstregular.test(password)
@@ -88,5 +87,4 @@ window.onload = () => {
             return false
         }
     }
-
 }
