@@ -40,7 +40,6 @@ require_once "connect.php";
                         <a href="output_table.php" class="nav-link waves-effect waves-light">НАЗАД</a>
                     </li>
                 </ul>
-
             </div>
         </div>
     </nav>
@@ -60,8 +59,7 @@ require_once "connect.php";
 
                                     echo ("
                                   <a class='search-card' target='_blank' href='output_table.php#$result[0]'>
-                                    <div class='search-card__title'>$title <p class='search-card__body'>$content</p></div>
-                                    
+                                    <div class='search-card__title'>$title <p class='search-card__body'>$content</p></div>                                 
                                   </a>
                                   ");
                                 }
