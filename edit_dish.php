@@ -4,6 +4,7 @@ require_once "functions.php";
 if(!isset($_SESSION['user']))
     header('Location: ../register.php');
 else{
+
     $id = mysqli_real_escape_string($mysql, trim($_POST['id']));
     $dish = mysqli_real_escape_string($mysql, trim($_POST['dish']));
     $price = mysqli_real_escape_string($mysql, trim($_POST['price']));

@@ -46,10 +46,10 @@ require_once "connect.php";
                     <li class="nav-item">
                         <a href="delivery.php" class="nav-link waves-effect waves-light">ДОСТАВКА</a>
                     </li>
-<!--                    <li class="nav-item">-->
-<!--                        <a href="dish.php" class="nav-link">ДОБАВИТЬ БЛЮДО-->
-<!--                        </a>-->
-<!--                    </li>-->
+                    <li class="nav-item">
+                        <a href="dish.php" class="nav-link">ДОБАВИТЬ БЛЮДО
+                        </a>
+                    </li>
                     <?php
                     if(empty($_SESSION['user'])){
                     ?>
@@ -251,7 +251,7 @@ if($_SESSION['user'] == ''):
                         dataType: "json",
 
                         data: {id: id, dish: name, time: time, weight: weight, calories: calories, price: price, img_path: img},
-                        success: function(){
+                        complete: function(){
                             showDishList();
                         }
                     });

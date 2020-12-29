@@ -55,7 +55,7 @@ $result=$result -> fetch_all();
       <th scope='col'>ВЕС</th>
       <th scope='col''>КАЛОРИИ</th>
       <th scope='col''>ВРЕМЯ ГОТОВКИ</th>
-      <th scope='col''>ПОЛЬЗОВАТЕЛЬ</th>
+<!--      <th scope='col''>ПОЛЬЗОВАТЕЛЬ</th>-->
 
       <th scope='col''></th>
     </tr>
@@ -76,10 +76,10 @@ $result=$result -> fetch_all();
       <td>$item[3]</td>
       <td>$item[4]</td>
       <td>$item[5]</td>
-      <td>$item[6] <br><form action='profile.php' method='post' id='edit_form'>
+
         <input type='hidden' value='$item[7]' name='id' id='id'>
         
-      <button class='btn btn-outline-primary' type='submit'>посмотреть инфу о пользователе</button>
+
       
       </form>
       <td> 
