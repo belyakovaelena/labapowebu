@@ -103,7 +103,8 @@ if($_SESSION['user'] == ''):
                         <p>Имя: <?= $name ?></p><br>
                         <p>login: <?=$login?></p>
 <!--                        <br><a class='btn btn-outline-primary' href='output_table.php'  >посмотреть таблицу блюд</a>-->
-                        <a class='btn btn-outline-primary' href='outputusers_table.php'  >посмотреть таблицу пользователей</a>
+<!--                        <a class='btn btn-outline-primary' href='outputusers_table.php'  >посмотреть таблицу пользователей</a>-->
+                        <a class='btn btn-outline-primary' href='register.php'  >назад</a>
                     </div>
                 </div>
             </div>
