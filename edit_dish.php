@@ -28,5 +28,5 @@ else{
     $mysql->query("UPDATE dishes SET dish='$dish' , price='$price', weight='$weight', calories='$calories', time='$time', user='$user',
     user_id='$user_id',img='$uuid' WHERE id ='$id'");
 
-    header('Location: ../dish_edit_view.php');
+    //header('Location: ../dish_edit_view.php');
 }

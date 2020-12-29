@@ -7,21 +7,13 @@ $result = $mysql -> query($sql);
 $result=$result -> fetch_all();
 
 ?>
-<form class="form" action="search_users.php" method="POST">
-    <div class="search-box">
-        <input type="search" class="search-txt" placeholder="Поиск" name="search">
-        <input type="submit">
-    </div>
-</form>
-<table class='table table-hover'>
+<table class='table table-hover' style="color: white;">
 
     <input type='hidden' value="<?php $result[0]?>" id="id">
     <thead class='thead-dark'>
     <tr>
         <th scope='col'>ЛОГИН</th>
         <th scope='col'>ИМЯ</th>
-        <th scope='col''></th>
-
     </tr>
     </thead>
     <tbody>
@@ -40,26 +32,7 @@ $result=$result -> fetch_all();
       
       </form></td>
       
-      
-      
-     
-        <td> 
-        <form action='user_edit_view.php' method='post' id='edit_form'>
-        <input type='hidden' value='$item[0]' name='id' id='id'>
-        
-      <button class='btn btn-outline-primary' type='submit'>редактировать</button>
-      
-      </form>
-     
-     <form action='delete_user.php' method='post' id='edit_form' >
-        <input type='hidden' value='$item[0]' name='id' id='id'>
-        
-      <button class='btn btn-outline-primary' type='submit'>удалить</button>
-      </form> 
-      
       </td>
-  
-      
     </tr>
    
    ";
@@ -68,5 +41,4 @@ $result=$result -> fetch_all();
 
     </tbody>
 </table>
-<a class='btn btn-outline-primary' href='output_table.php' >Вернуться назад</a>
 

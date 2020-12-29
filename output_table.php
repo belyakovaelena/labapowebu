@@ -9,14 +9,42 @@ $result=$result -> fetch_all();
 
 
 ?>
-<form class="form" action="search_dish.php" method="POST">
-    <div class="search-box">
-        <input type="search" class="search-txt" placeholder="Поиск" name="search">
-        <input type="submit">
-    </div>
-</form>
+<div class="form add_dish_form d-none" >
+    <h1>ДОБАВИТЬ БЛЮДО</h1>
+    <form action="" method="post" id="dish_form" enctype="multipart/form-data">
+        <div class="input-form">
+            <input type="text" name="dish" id="name" placeholder="Введите название блюда">
+        </div>
+        <div class="input-form">
+            <input type="text" name="price" id="price" placeholder="Введите цену блюда(в руб.)">
+        </div>
+        <div class="input-form">
+            <input type="text" name="weight" id="weight" placeholder="Введите вес блюда(в граммах)">
+        </div>
+        <div class="input-form">
+            <input type="text" name="calories" id="calories" placeholder="Количество калорий">
+        </div>
+        <div class="input-form">
+            <input type="text" name="time" id="time" placeholder="Время приготовления(часы:минуты:секунды)">
+        </div>
 
-<table class='table table-hover'>
+        <div class="example-1">
+            <div class="form-group">
+                <label class="label">
+
+                    <span class="title">Добавить файл</span>
+                    <input type="file" name="file">
+                </label>
+            </div>
+        </div>
+
+        <div class="input-form">
+            <button type="button" onclick="addDish()">ДОБАВИТЬ</button>
+        </div>
+    </form>
+</div>
+<div class="d-none" id="editDishPopup"></div>
+<table class='table' style="color: white;">
 
 <input type='hidden' value="<?php $result[0]?>" id="id">
   <thead class='thead-dark'>
@@ -55,15 +83,8 @@ $result=$result -> fetch_all();
       
       </form>
       <td> 
-        <form action='dish_edit_view.php' method='post' id='edit_form'>
-        <input type='hidden' value='$item[0]' name='id' id='id'>
-      <button class='btn btn-outline-primary' type='submit'>редактировать</button>
-      </form>
-     <form action='delete_dish.php' method='post' id='edit_form' >
-        <input type='hidden' value='$item[0]' name='id' id='id'>
-        
-      <button class='btn btn-outline-primary' type='submit'>удалить</button>
-      </form> 
+        <button class='btn btn-outline-primary edit_dish' onclick='editDish($item[0])'>редактировать</button>
+        <button class='btn btn-outline-primary edit_dish' onclick='delDish($item[0])'>удалить</button>
       
       </td>
     </tr>
@@ -74,7 +95,18 @@ $result=$result -> fetch_all();
 
 </tbody>
     </table>
-  <a class='btn btn-outline-primary' href='add_dish.php'  >Вернуться назад</a>
-<a class='btn btn-outline-primary' href='outputusers_table.php'  >посмотреть всех пользователей</a>
+<button class='btn btn-outline-primary add_dish'>Добавить блюдо</button>
+<script type="text/javascript">
+    $('.edit_dish').click(function(){
+        $('#editDishPopup').toggleClass('d-none');
+    });
+    $('.add_dish').click(function(){
+        $('.add_dish_form').toggleClass('d-none');
+    });
+    function editDish(id)
+    {
+        $("#editDishPopup").load("/dish_edit_view.php?id="+id);
+    }
+</script>
 
 

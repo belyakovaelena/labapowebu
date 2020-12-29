@@ -62,7 +62,7 @@ session_start();
                 <?php
                 if (!empty($_SESSION['user'])) :
                     ?>
-                    <li class="nav-link" >Привет, <?= $_SESSION['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
+                    <li class="nav-link" style="color: white">Привет, <?= $_SESSION['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
                 <?php
                 endif;
                 ?>
@@ -102,7 +102,7 @@ if($_SESSION['user'] == ''):
                         <h3>Информация о пользователе</h3><br>
                         <p>Имя: <?= $name ?></p><br>
                         <p>login: <?=$login?></p>
-                        <br><a class='btn btn-outline-primary' href='output_table.php'  >посмотреть таблицу блюд</a>
+<!--                        <br><a class='btn btn-outline-primary' href='output_table.php'  >посмотреть таблицу блюд</a>-->
                         <a class='btn btn-outline-primary' href='outputusers_table.php'  >посмотреть таблицу пользователей</a>
                     </div>
                 </div>

@@ -10,5 +10,5 @@ else{
 
     $mysql->query("UPDATE users SET login='$login' , name='$name' WHERE id ='$id'");
 
-    header('Location: ../edit_lk_user.php');
+   // header('Location: ../edit_lk_user.php');
 }
