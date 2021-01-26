@@ -27,9 +27,9 @@ if(mysqli_num_rows($data) == 0) {
     $mysql->query("INSERT INTO `users` (`login`, `pass`, `name`) VALUES('$login', '$pass', '$name')");
     $mysql->close();
     $_SESSION['user']='';
-    header('Location: /register.php');
+    header('Location: ../register.php');
 }else {
-//занят логин
+//занят
     echo "Логин занят";
 }
 

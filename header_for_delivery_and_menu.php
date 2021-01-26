@@ -29,7 +29,10 @@
                         <?php
                     }
                     ?>
-
+                    <li class="nav-item">
+                        <a href="dish.php" class="nav-link">ДОБАВИТЬ БЛЮДО
+                        </a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav nav-flex-icons">
                     <li class="nav-item">
@@ -43,7 +46,7 @@
                 <?php
                 if (!empty($_SESSION['user'])) :
                     ?>
-                    <li class="nav-link" style="color: white" >Привет, <?= $_SESSION['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
+                    <li class="nav-link" >Привет, <?= $_SESSION['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
                 <?php
                 endif;
                 ?>

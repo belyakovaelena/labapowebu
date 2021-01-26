@@ -25,8 +25,7 @@ require_once "connect.php";
     <link rel="stylesheet" href="css/style_regist.css">
 </head>
 <body>
-<header id="menu">
-
+<header>
     <div class="text-center mb-4">
         <h1 align="center" class="text-uppercase font-weight-bold" >ДОБРО ПОЖАЛОВАТЬ</h1>
     </div>
@@ -66,7 +65,7 @@ require_once "connect.php";
                 <?php
                 if (!empty($_SESSION['user'])) :
                     ?>
-                    <li class="nav-link" style="color: white">Привет, <?= $_SESSION['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
+                    <li class="nav-link" >Привет, <?= $_SESSION['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
                 <?php
                 endif;
                 ?>
@@ -81,7 +80,7 @@ if($_SESSION['user'] == ''):
     <div class="col">
         <div class="form">
             <h1>ДЛЯ РЕГИСТРАЦИИ</h1>
-            <form action="/check.php" method="post">
+            <form action="check.php" method="post">
                 <div class="input-form">
                     <input type="text" name="name" id="name" placeholder="Введите имя">
                 </div>
@@ -101,7 +100,7 @@ if($_SESSION['user'] == ''):
                 <div class="col">
                     <div class="form">
                         <h1>ДЛЯ АВТОРИЗАЦИИ</h1>
-                        <form action="/authorization.php" method="post">
+                        <form action="authorization.php" method="post">
                             <div class="input-form">
                                 <input type="text" name="login" id="login" placeholder="ЛОГИН(почта ваша)">
                             </div>
@@ -139,23 +138,6 @@ if($_SESSION['user'] == ''):
                         </div>
                     </div>
 
-                    <div class="form edit_user_form d-none" style="position: absolute; z-index: 1; background-color: black;">
-
-                        <form action="" method="post" id="user_form" ><h1>РЕДАКТИРОВАТЬ ИНФУ О ПОЛЬЗОВАТЕЛЕ</h1>
-                            <div class="input-form">
-                                <input value="<?php echo $arr['id']; ?>" name="id" type="hidden" id="uid">
-                                <input value="<?php echo $name; ?> " type="text" name="name" id="uname" placeholder="Введите имя">
-                            </div>
-                            <div class="input-form">
-                                <input value="<?php echo $login; ?> " type="text" name="login" id="ulogin" placeholder="ЛОГИН">
-                            </div>
-
-                            <div class="input-form">
-                                <button type="button" onclick="updateUser()">ИЗМЕНИТЬ</button>
-                            </div>
-
-                        </form>
-                    </div>
                     <section id="examples" class="text-center">
                         <div class="row">
                             <div class="col-lg-4 col-md-12 mb-4">
@@ -163,7 +145,11 @@ if($_SESSION['user'] == ''):
                                 <h3>Информация о пользователе</h3><br>
                                 <p>Имя: <?= $name ?></p><br>
                                 <p>login: <?=$login?></p>
-                                <button class='btn btn-outline-primary edit_user'>редактировать информацию о пользователе</button>
+                                   <form action='edit_lk_user.php' method='post' id='edit_form'>
+                                        <input type='hidden' value='<?=$arr['id']?>' name='id' id='id'>
+                                        <button class='btn btn-outline-primary' type='submit'>редактировать информацию о пользователе</button>
+                                    </form>
+
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 mb-4">
@@ -176,15 +162,13 @@ if($_SESSION['user'] == ''):
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 mb-4">
-                                <br><button class='btn btn-outline-primary' onclick="harakiri() ">удалить аккаунт</button>
-                                <br><button class='btn btn-outline-primary dish_list' onclick="showDishList()">посмотреть таблицу блюд</button>
-                                <br><button class='btn btn-outline-primary user_list' onclick="showUsersList()" >посмотреть таблицу зарегистрированных пользователей</button>
+                                <br><a class='btn btn-outline-primary' href='delete_lk.php'  >удалить аккаунт</a>
+                                <br><a class='btn btn-outline-primary' href='output_table.php'  >посмотреть таблицу блюд</a>
+                                <br><a class='btn btn-outline-primary' href='outputusers_table.php'  >посмотреть таблицу зарегистрированных пользователей</a>
 
                             </div>
                         </div>
                     </section>
-                    <div class="d-none" id="dishes"></div>
-                    <div class="d-none" id="users"></div>
                 </footer>
                 <?php
                 $mysql->close();
@@ -199,92 +183,7 @@ if($_SESSION['user'] == ''):
             <!— MDB core JavaScript —>
             <script type="text/javascript" src="js/mdb.min.js"></script>
             <!— Your custom scripts (optional) —>
-            <script type="text/javascript">
-                $('.edit_user').click(function(){
-                    $('.edit_user_form').toggleClass('d-none');
-                });
-                $('.dish_list').click(function(){
-                    $('#dishes').toggleClass('d-none');
-                });
-                $('.user_list').click(function(){
-                    $('#users').toggleClass('d-none');
-                });
-                function harakiri()
-                {
-                    $("#dishes").load("/delete_lk.php");
-                };
-                function showDishList()
-                {
-                    $("#dishes").load("/output_table.php");
-                };
-                function showUsersList()
-                {
-                    $("#users").load("/outputusers_table.php");
-                };
-                function updateUser()
-                {
-                    var id = document.getElementById("uid").value;
-                    var login = document.getElementById("ulogin").value;
-                    var name = document.getElementById("uname").value;
-                    $.ajax({
-                        type: "POST",
-                        url: "/edit_lk.php",
-                        dataType: "json",
-                        data: {id: id, name: name, login: login},
-                    }).done(function()
-                    {
-                    });
-                    $('.edit_user_form').toggleClass('d-none');
-                };
-                function updateDish()
-                {
-                    var id = document.getElementById("did").value;
-                    var weight = document.getElementById("dweight").value;
-                    var calories = document.getElementById("dcalories").value;
-                    var time = document.getElementById("dtime").value;
-                    var name = document.getElementById("dname").value;
-                    var price = document.getElementById("dprice").value;
-                    var img = document.getElementById("img_path").value;
-                    $.ajax({
-                        type: "POST",
-                        url: "/edit_dish.php",
-                        dataType: "json",
-
-                        data: {id: id, dish: name, time: time, weight: weight, calories: calories, price: price, img_path: img},
-                        complete: function(){
-                            showDishList();
-                        }
-                    });
-                    $('#editDishPopup').toggleClass('d-none');
-                    //showDishList();
-                };
-                function delDish(id)
-                {
-                    $.ajax({
-                        type: "POST",
-                        url: "/delete_dish.php",
-                        dataType: "json",
-                        data: {id: id},
-                    });
-                    showDishList();
-                }
-                function addDish()
-                {
-                    var $that = $('#dish_form'),
-                    formData = new FormData($that.get(0));
-                    $.ajax({
-                        type: "POST",
-                        url: "/add_dish.php",
-                        contentType: false,
-                        processData: false,
-                        data: formData,
-                        success: function(){
-                            showDishList();
-                        }
-                    })
-                    $('.add_dish_form').toggleClass('d-none');
-                };
-            </script>
+            <script type="text/javascript"></script>
         </main>
 </body>
 </html>

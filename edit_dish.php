@@ -4,7 +4,6 @@ require_once "functions.php";
 if(!isset($_SESSION['user']))
     header('Location: ../register.php');
 else{
-
     $id = mysqli_real_escape_string($mysql, trim($_POST['id']));
     $dish = mysqli_real_escape_string($mysql, trim($_POST['dish']));
     $price = mysqli_real_escape_string($mysql, trim($_POST['price']));
@@ -29,5 +28,5 @@ else{
     $mysql->query("UPDATE dishes SET dish='$dish' , price='$price', weight='$weight', calories='$calories', time='$time', user='$user',
     user_id='$user_id',img='$uuid' WHERE id ='$id'");
 
-    //header('Location: ../dish_edit_view.php');
+    header('Location: ../dish_edit_view.php');
 }

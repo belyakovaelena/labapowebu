@@ -60,7 +60,7 @@ session_start();
                 <?php
                 if (!empty($_SESSION['user'])) :
                     ?>
-                    <li class="nav-link" style="color: white" >Привет, <?= $_SESSION['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
+                    <li class="nav-link" >Привет, <?= $_SESSION['user'] ?>.<a href="register.php" > Личный кабинет </a><a href="exit.php" >Выйти</a></li>
                 <?php
                 endif;
                 ?>
